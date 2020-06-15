@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Service</title>
+</head>
+<body>
+    <h1>Hotel Room Service</h1>
+    <p><b>Welcome to our hotel!  We hope you enjoy your stay.</b></p>
+    <p>We value you as our guest!  Use this online form to have a hot, delicious breafast delivered to your room.  
+        Please fill out this form before midnight so that we can make proper accomodatoins.  All meals are served 
+        before 10AM.  Tipping is encouraged. </p>
+    
+    <form>
+            <fieldset>
+             <legend>Hotel Guest Contact Info</legend>
+             <p>First Name:   <input type=text></p>
+             <p>Last Name:<input type=text></p>  
+             <p>Room Number:<input type=text></p>           
+            </fieldset>
+
+     
+   
+        <p>What time would you like to be served?</p>
+        <select name="time">
+            <option value="6">6AM</option>
+            <option value="7">7AM</option>
+            <option value="8">8AM</option>
+            <option value="9">9AM</option>
+            <option value="10">10AM</option>
+        </select>
+       <p>Please choose your entry:</p> 
+      <select name="breakfast5">
+          <option value="Waffles">Chicken and Waffles</option>
+          <option value="Pancakes">Pancakes and Maple Syrup</option>
+          <option value="Hash Browns">Hash Browns</option>
+          <option value="Bacon & Eggs">Bacon and Eggs</option>
+          <option value="toast">Boring ol' Toast</option>
+      </select>
+     <p>Would you like extra butter?</p> 
+     <input type="radio" name="butter"
+      value="Yes" checked>
+      Yes
+      <input type="radio" name="butter"
+      value="No">
+      No
+      <input type="radio" name="butter"
+      value="passive">
+      Surprise me
+      <p><input type="submit"></p>
+    </form>
+</body>
+</html>

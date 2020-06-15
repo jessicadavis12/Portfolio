@@ -1,0 +1,36 @@
+.vl{
+    border-left: 3px solid black;
+    height: 500px;
+    position: absolute;
+    left: 60%;
+    margin-left: -10px;
+    top: 50px;
+
+}
+.vl2{
+    border-left: 3px solid black;
+    height: 500px;
+    position: absolute;
+    right: 60%;
+    margin-left: -10px;
+    top: 50px;
+
+}
+.hl{
+    border-bottom: 3px solid black;
+    height: 500px;
+    position: absolute;
+    margin-bottom: 60%;
+  
+   
+
+}
+.h2{
+    border-bottom: 3px solid black;
+    height: 500px;
+    position: absolute;
+    bottom: 60%;
+    
+    
+
+}

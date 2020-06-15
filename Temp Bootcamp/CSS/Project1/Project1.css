@@ -1,0 +1,56 @@
+
+.rectangle1{
+    position: absolute;
+    left: 10px; 
+    top: 10px;
+    z-index: 0;
+    height: 75px;
+    width: 150px;
+    border-radius: 15px;
+    background-color: #0d47a1;
+    text-align: center;
+    line-height: 70px;
+    color: white;
+    
+}
+.rectangle2{
+    position: absolute;
+    left: 170px; 
+    top: 10px;
+    z-index: 0;
+    height: 75px;
+    width: 150px;
+    border-radius: 15px;
+    background-color: #f44336;
+    text-align: center;
+    line-height: 70px;
+    color: white;
+    
+}
+.rectangle3{
+    position: absolute;
+    left: 335px; 
+    top: 10px;
+    z-index: 0;
+    height: 75px;
+    width: 150px;
+    border-radius: 15px;
+    background-color: #4caf50;
+    text-align: center;
+    line-height: 70px;
+    color: white;
+    
+}
+.rectangle4{
+    position: absolute;
+    left: 500px; 
+    top: 10px;
+    z-index: 0;
+    height: 75px;
+    width: 150px;
+    border-radius: 15px;
+    background-color: #ffeb3b;
+    text-align: center;
+    line-height: 70px;
+    color: white;
+} 
