@@ -1,0 +1,101 @@
+body, ul, li, a {
+    margin:0;
+    padding: 0;
+
+}
+
+body{
+    background-color:#eaf0f2;
+    font-family: 'Oswald', sans-serif;
+}
+
+nav{
+    background-color: #263238;
+    height: 75px;
+    font-size: 25px;
+    position: relative;
+}
+nav ul{
+    list-style-type: none;
+}
+nav li{
+    float: left;
+    text-align: center;
+}
+
+nav li a{
+    display: inline-block;
+    color: white;
+    margin-top: 5px;
+    padding: 15px 35px;
+    text-align: left;
+    
+}
+.logo{
+    font-size: 42px;
+    line-height: 35px;
+    padding: 15px 35px;
+
+}
+.dropcontent{
+    max-height: 0px;
+    color: #eaf0f2;
+    position: absolute;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.dropcontent a{
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+}
+
+
+a:hover:not(.logo){
+    background:#546E7A;
+}
+
+.drop:hover .dropcontent{
+    display: block;
+    background-color: #263238;
+    max-height: 500px;
+    transition: max-height .6s;
+}
+
+.dropcontent a:hover{
+    color:#cfd8dc;
+}
+
+.middle{
+    color: black;
+    padding-left: 35px;
+}
+
+footer{
+    background-color: #263238;
+    font-size: 18px;
+    padding: 50px;
+    margin-top: 75px;
+    color: #b0bec5;
+    text-align: center;
+    
+}
+
+.bottom a{
+    text-decoration:none;
+    color: white;
+}
+
+#bottomLinks a:link, #bottomlinks a:visited{
+    color: white;
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+#bottomLinks a:hover{
+    color: #cfd8dc
+}
