@@ -1,19 +1,26 @@
 
+
 function populatearray(){
     var num=[];
-    num[0]= Number(prompt("Enter a number: ";));
-    num[1]= Number(prompt("Enter a number: ";));
-    num[2]= Number(prompt("Enter a number: ";));
-    function additup(){};
+    num[0]= parseFloat(prompt("Enter a number: "));
+    num[1]= parseFloat(prompt("Enter a number: "));
+    num[2]= parseFloat(prompt("Enter a number: "));
+  //  console.log(num)
+    additup(num);
 }
 
+var displayResults = document.querySelector("#results")
 
-function additup(){
+function additup(n){
     
-var arraysum = 0;
-arraylen = num.length;
-for (i=0; i<arraylen; i++){
-arraysum = arraysum +num[i]}
-displyResults.innerHTML="The sum of all your numbers is " +arraysum;
-
+    var arraysum = 0;
+    for (var i=0; i<n.length; i++){
+        arraysum = arraysum +n[i]
+    }
+    // console.log(arraysum)
+    if (arraysum){
+        displayResults.innerHTML=  arraysum;  
+    } else{
+        displayResults.innerHTML=  "User did not enter all numbers";
+    }
 }

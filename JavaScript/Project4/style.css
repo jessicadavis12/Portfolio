@@ -13,8 +13,9 @@ body{
 
 #message{
     color: white;
+    padding-top: 200px;
     align-items: center;
-    width: 900px;
+    width: 850px;
     margin: 0 auto;
     text-align: center;
     font-size: 54px;
