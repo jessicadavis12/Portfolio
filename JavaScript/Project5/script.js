@@ -15,11 +15,11 @@ function nextImage(){
 
 
  function prevImage(){
-    if (i=0){
-        i=menuArray.length-1
+    if (i>0){
+        i=i-1
     }else{
-         i=i-1
+         i=menuArray.length-1
      }
     document.querySelector("img").setAttribute("src", menuArray[i]);
- }
+ };
  
