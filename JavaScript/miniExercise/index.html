@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+<input type="button" id='btn' value="ON"
+style="background-color: green; color: white;" onclick="changeColors()">
+
+<input type="button" value="Click me for date and time" onclick="displayTime()">
+<p id='demoDateObject'></p>
+<p id='demoTime'></p>
+<p id= "demoFullDate"></p>
+
+<form>
+    Name:<br>
+    <input type="text" id="myName"><br>
+    Age:<br>
+    <input type="text" id="myAge"><br>
+    Address: <br>
+    <input type="text" id="myAddress"><br>
+    <input type="button" value="Submit" onclick="displayInfo()">
+</form>
+<p id = "demo"></p>
+
+<form>
+    Enter a sentenance:<br>
+    <input type="text" id="sentence"><br>
+    <input type="button" value="Submit" onclick="checkSentence()">
+</form>
+<p id='displaySentence'></p>
+<script src="script.js"></script>  
+   
+</body>
+</html>

@@ -2,8 +2,10 @@ body{
     background: #4FC3F7;
 }
  
-.clock{
+#clock{
     color: wheat;
-    font-size: 54px;
-    margin: 20%, 36%
+    font-size: 95px;
+    margin:0 auto;
+    padding-top: 300px;
+    padding-left: 390px;
 }
