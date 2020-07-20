@@ -3,5 +3,7 @@ body{
 }
  
 .clock{
+    color: wheat;
     font-size: 54px;
+    margin: 20%, 36%
 }

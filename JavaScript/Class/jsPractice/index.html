@@ -4,26 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+  <div>
+    <input type="button" value="Turn On">
+  </div>
 
-<div class="container">
-    <p id="error"></p>
-    <div id= wrapper>
-        <form>
-            <label for "name">Your name</label>
-            <input type="text" id="name">
-            <label for "password">Your password</label>
-            <input type="password" id="password">
-            <button>Submit</button>
-        </form>
-    </div>
+  <div>
+    <input type="button" value="Decrement" id="down" onclick="numberHandler(-1)">
+    <input type="button" value="Increment" id="up" onclick="numberHandler(1)">
+    <p>Counter:</p>
+    <p id="numDisplay"></p>
+    <p class="error"></p>
+  
 </div>
 
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+  </table>
+</div>
+
+<p>Click the button to insert another family member profile:</p>
+
+<button onclick="fillthehouse
+()">New Family Member</button>
 
 
     <script src="script.js"></script> 
