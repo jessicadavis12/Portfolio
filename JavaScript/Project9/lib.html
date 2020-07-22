@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Card</title>
+    <title>Library</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" " crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"  crossorigin="anonymous">
-
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">   
 </head>
@@ -15,20 +14,33 @@
 <body>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>      
-            <li><a href="lib.html">Recipe Book</a></li>
+        <li><a href="index.html">Home</a></li>      
+        <li><a href="lib.html">Recipe Book</a></li>
         </ul>
     </nav>
 
-    <h2>Add a recipe</h2>
-    <form class="newRecipe">
-        <input type="text" placeholder="Recipe Name" id="title">
-        <input type="number" placeholder="Serving Size" id="ssize">
-        <input type="number" placeholder="Calories" id="cal">
-        <input type="textarea" placeholder="Recipe" id="recipe"rows = "15" cols="50">
-        <input type="image" value="Picture">
-        <button type="button" value="addNext">Add</button>
+    <form>
+        <input type="submit" value="Egg Salad Recipe" onclick="egg()">
+        <br>
+         <input type="submit" value="Chicken Salad Recipe" onclick="chicken()"><br>
+         <input type="submit" value="Garden Salad" onclick="Garden()">
+        <br>
     </form>
+        
+    <div id="selected">
+        <h1 id="title"></h1>
+        <h5 id="servings"></h5>
+        <h6 id="calories"></h6>
+        <p id="rec"></p>
+        <ul id="ing"></ul>
+        <a id="photo" href=""></a>
+
+    </div>
+   
+    <h1></h1>
+    <h6></h6>
+    
+
     
 
 
