@@ -1,23 +1,24 @@
-var theEmail= $("#email");
-var thePassword= $("#password")
-
-$("email").mouseover(function(){
+$("#container").css("border", "solid black 3px");
+$("#email, #password").hover(function(){
     $(this).focus();
-})
+            });
 
-//$("#container").css("border", "solid black 3px")
+$(document).ready(function(){
+$('form').submit(function(){
+    var theEmail= $("#email").val();
+    var thePassword= $("#password").val();
 
+    function validateEmail(theEmail) {
+            var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            return emailReg.test(theEmail);
+    };
+            
+    if(!validateEmail(theEmail)){
+        $("#emv").text("Please check entry, valid email not entered.");
+        };
 
-// $("#email, #password").keypress(function(event){
-//     if(event.which==13){
-//         function validateEmail(theEmail) {
-//             var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-//             return emailReg.test(theEmail);
-//             }
-//     if( !validateEmail(theEmail)){
-//         $("emv").text("Please check entry, valid email not entered.");
-//         }
-//    // if("#password").length<6{
-//    //     $("pwv").text("Please enter a longer password")
-//    // };
-// });
+    if (thePassword.length < 6){
+      $("#pwv").text("Please enter a longer password")
+    };
+});
+});

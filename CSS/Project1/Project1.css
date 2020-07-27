@@ -9,6 +9,7 @@
     border-radius: 15px;
     background-color: #0d47a1;
     text-align: center;
+    font-weight: bolder;
     line-height: 70px;
     color: white;
     
@@ -23,6 +24,7 @@
     border-radius: 15px;
     background-color: #f44336;
     text-align: center;
+    font-weight: bolder;
     line-height: 70px;
     color: white;
     
@@ -37,6 +39,7 @@
     border-radius: 15px;
     background-color: #4caf50;
     text-align: center;
+    font-weight: bolder;
     line-height: 70px;
     color: white;
     
@@ -51,6 +54,7 @@
     border-radius: 15px;
     background-color: #ffeb3b;
     text-align: center;
+    font-weight: bolder;
     line-height: 70px;
     color: white;
 } 
