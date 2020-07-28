@@ -59,10 +59,10 @@ function displaySelected(){
     $("photo").img(displayPictu);
 }
 
-//this doesn't work with the field entry from home page 
+//this doesn't work with the field entry from home page - will link by id 
 
 
-function newRecipe(title, serving, calories, Recipe, ul, pictu){
+function newRecipe($("title","ssize", "cal", "recipeent", 'ul', "Picture" ).val()){
     this.newTitle = title;
     this.newServing = serving;
     this.newCalories = calories;

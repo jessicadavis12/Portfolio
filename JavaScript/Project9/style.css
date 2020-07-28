@@ -1,7 +1,8 @@
-body {
-    animation-name: backgroundColorPalette;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-  }
- 
+body{
+  background-color: powderblue;
+}
+
+.newstyleRec.:hover{
+background-color: salmon;
+
+}
