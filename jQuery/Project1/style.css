@@ -11,3 +11,42 @@ body {
   left: 0;
   z-index: 0;
 }
+#firstbox{
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+}
+.secondbox{
+  text-align: center;
+  margin-left: 180px;
+  margin-right: 180px;
+  padding-bottom: 40px;
+}
+.headerspacing{
+  padding-bottom: 50px;
+}
+
+#fourthbox{
+  text-align: center;
+  padding-top: 60px;
+}
+#faqbox{
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+.faqa{
+  text-align: center;
+  margin-left: 180px;
+  margin-right: 180px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-weight: bold;
+  font-size: 24px;
+}
+.quest{
+  font-weight: bolder;
+  font-size: 28px;
+}
+
