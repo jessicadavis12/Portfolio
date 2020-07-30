@@ -15,7 +15,7 @@ body {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-
+  
 }
 .secondbox{
   text-align: center;
@@ -35,7 +35,7 @@ body {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 40px;
-  font-size: 32px;
+  font-size: 38px;
 }
 .faqa{
   text-align: center;
@@ -50,4 +50,7 @@ body {
   font-weight: bolder;
   font-size: 28px;
 }
-
+#icon{
+  padding-bottom: 60px;
+  text-align: center;
+}
