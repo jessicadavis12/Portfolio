@@ -11,12 +11,19 @@ body, html{
 }
 .card{
     background-color: #6699cc;
+    border-radius: 15px;
     opacity: 0.5;
     color: white;
     text-align: center;
-    outline: black solid 3px;
+    font-weight: bolder;
+    font-size: x-large;
+    border: black solid 3px;
+    width: 18rem;
+    height: 10rem; 
+    padding-top: 40px;
+    
 
 }
-#one{
-    margin-top: 50px;
-}
+.container{
+    margin-top: 100px;
+} /*spacing on the page */
