@@ -32,11 +32,30 @@ displayInfo = () => {
     demo.innerHTML = txt;
 };
 
-checkSentence=() => {
-    let sentence = document.getElementById('sentence');
-    let text = sentence.value;
-    let newText = text.replace(/a/gi, 'x');
-    let displayText = documtent.getElementById('displaySentence');
-    displayText.innerHTML = `Your original sentence was: ${text}<br> and your new sentence is: ${newText}`;
+randomRun = (min, max)=>{
+    let randomNumber = Math.floor(Math.random()* (max-min+1)+min);
+    document.getElementById('randNum').innerHTML = "Your random number is:" + randomNumber
+}
 
-};
+compareStrings = () =>{
+    var compStr1 = document.getElementById(`compString1`).value;
+    var compStr2 = document.getElementById('compString2').value;
+    let result = (compStr1===compStr2)? 'is the same as':'is different than';
+    compStringDisplay.innerHTML=`The first string you entered:${compStr1}<br>${result}</br>
+    the second string you entered:${compStr2}`;
+
+}
+
+
+// checkSentence=() => {
+//     let sentence = document.getElementById('sentence');
+//     let text = sentence.value;
+//     let newText = text.replace(/a/gi, 'x');
+//     let displayText = documtent.getElementByI("displaySentence");
+//     displayText.innerHTML = `Your original sentence was: ${text}<br> and your new sentence is: ${newText}`;
+//     sentence.value= "";
+// };
+
+// clearDisplay = () => {
+//     document.getElementById('displaySentence').innerHTML = '';
+// }
