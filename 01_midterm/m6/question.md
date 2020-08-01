@@ -14,4 +14,5 @@ on github.com)
 Please explain your choice.
 
 ### Answer:
-
+14, 3*4+2  the return calls another fucniton so it can't return the function until a return doens't call another funciton. 
+Normally the return stops unless nested- but can also be used for a callback funcion

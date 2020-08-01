@@ -6,5 +6,5 @@
 3. `<a href="austincc.edu" target="_blank">`
 
 ### Answer:
-<a href="austincc.edu" target="_blank">`</a>
-The second 3
+4. <a href="austincc.edu" target="_blank">`</a>
+

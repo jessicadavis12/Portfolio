@@ -4,7 +4,7 @@ Provide example code showing the use of each of the methods you list. (40% credi
 
 How do you remove a specified member from the array?  Provide small sample. (35% credit)
 
-shift- adds an element to the front of the array
+unshift- adds an element to the front of the array
 push- adds an element to the end of the array
 splice- adds elements to specified locaiton in the array
 concat- merges two arrays together 

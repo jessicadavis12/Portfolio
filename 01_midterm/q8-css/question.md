@@ -17,5 +17,5 @@ What color would you expect the item "Sausage" to show as and why?
 </div>
 
 
-question a: blue- id #must buy  specificity takes precidence 
-question b:  blue- id #must buy specificity takes precidence 
+question a: red- the CSS is for the unordered list line items with the class "hilight" is red that aren't odd
+question b:  blue- id #must buy specificity takes precidence over the element selector 
