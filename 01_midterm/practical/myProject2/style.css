@@ -1,0 +1,22 @@
+body, html{
+    height:100%;
+}
+#bk{
+    background-image: url(background.png);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;  /*full screen heigt and centered */
+}
+.card{
+    background-color: #6699cc;
+    opacity: 0.5;
+    color: white;
+    text-align: center;
+    outline: black solid 3px;
+
+}
+#one{
+    margin-top: 50px;
+}
