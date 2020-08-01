@@ -1,8 +1,9 @@
 //for loop mod function output 
-i=0;
+
 function quest(){
-    for(i=0, i<5, i++){
+    for(var i=1; i<6; i++){
     let message = (i%2==0)? "even":"odd" //ternary logic using modus to assign odd/even//
-   $("#out").html=(i + " :" + message ) //
+   document.getElementById("out").textContent=(i +  ':' + message ) //
+   console.log(i+message)
     };
 };
