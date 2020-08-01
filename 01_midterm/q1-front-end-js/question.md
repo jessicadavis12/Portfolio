@@ -8,3 +8,11 @@ Explanation or comments are not needed for this question.
 
 
 ### Your Answer:
+
+HTML
+Input types are set to text- not number
+
+JS
+Var are not looking for values
+
+

@@ -3,4 +3,4 @@
 2. List 2 techniques you may use to make your pages more efficient (speedier to load) with respect to the images used on the page. 
 
 
-### Your Answer:
+### Your Answer:skip

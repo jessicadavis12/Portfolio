@@ -3,11 +3,13 @@ var secondNum = document.getElementById("second")
 var btn = document.querySelector("input[type='submit']")
 var msg = document.querySelector("#message")
 
+
 btn.onclick = function(){
-   let answer = multiply(firstNum, secondNum)
-   msg.innerText = `The answer is ${answer || ''}`
+   let answer = multiply(a, b)
+   msg.innerText = `The answer is ${answer}`
 }
 
-const multiply = function(a, b) {
+var multiply = function(a, b) {
+   
    console.log(a*b)
 } 
