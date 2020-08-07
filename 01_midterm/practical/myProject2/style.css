@@ -9,7 +9,7 @@ body, html{
     background-size: cover;
     height: 100%;  /*full screen heigt and centered */
 }
-.card{
+.card{ /*styling for the blocks */
     background-color: #6699cc;
     border-radius: 15px;
     opacity: 0.5;
