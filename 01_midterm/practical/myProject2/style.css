@@ -1,6 +1,13 @@
 body, html{
     height:100%;
 }
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+
 #bk{
     background-image: url(background.png);
 
@@ -10,6 +17,7 @@ body, html{
     height: 100%;  /*full screen heigt and centered */
 }
 .card{
+    margin-top: 50px; /* added this line*/
     background-color: #6699cc;
     border-radius: 15px;
     opacity: 0.5;
@@ -24,6 +32,7 @@ body, html{
     
 
 }
-.container{
-    margin-top: 100px;
-} /*spacing on the page */
+/* code not needed */
+/* .container{
+    margin-top: 50px;
+} spacing on the page */

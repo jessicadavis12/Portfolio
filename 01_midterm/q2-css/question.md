@@ -11,6 +11,8 @@ What do the following CSS selectors select? Please provide examples
 
 ### Your Answer:
 
+Score - 2.4 points
+
 div + p select all of the p elements directly following a div elements.  
 example 
  <p></p>  - will not be selected
@@ -28,6 +30,8 @@ div, p selects all Div and P elements
 <div></div> will be selected 
 <p></p>  - will be selected
 
+
+<!-- COMMENT - Selects all <p> elements where the parent is a <div> element -->
 div > p selects the p tags in the first div
 <div>  
 <p></p>  - will be selected

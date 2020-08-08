@@ -20,3 +20,5 @@ l= laptops and desktops
 on a phone in landscape orentation (horizontal)- you will see the 4 color names equally space across the screen in a row
 on a phone in portrait orientation (vertical)- you will the 4 color names stacked on top of each other in a column
 on a desktop you will see the 4 color names equally space across the screen in a row
+
+Score - 3pts - Good

@@ -12,3 +12,5 @@
 
 ### Answer:6
 
+Inocrrect - 0pts - Keep in mind where your jquery will be running - one .js file. How do we link to that file? inside ONE other file - in this case, index.html. So it would only affect 'one' page with p elements inside  all divs - #2
+

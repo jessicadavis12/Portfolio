@@ -49,3 +49,11 @@ Create a web page with appropriate styling such that the view looks, visually as
 
 <img src="images/background.png" alt="" width="50%">
 
+Score - 25/30pts
+
+1) At first glance, your cards are set too far down and overflow from the page
+2) In your HTML - you are using 'container' multiple times. This works with how you set it up BUT keep in mind, every html page should generally only have ONE 'container.' The reason is that container is a built-in CSS class so it has default styling already associated with it. This class also helps with responsiveness.
+3) Where are your comments? Even though you are using HTML and CSS you can still add comments about why you are using these specific properties, etc...
+4) I added one line of code to your CSS (think it is line 20) dealing with margin and then your code results were perfect.
+
+Overall, great job on this!!!!

@@ -7,3 +7,7 @@
 
 ### Answer:1
 
+Incorrect - 0pts - Keep in mind, a checkbox is a type of input so you need the input tags 
+with type="checkbox"
+
+

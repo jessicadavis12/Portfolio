@@ -17,3 +17,22 @@ Now wrap the functionality into a function that takes appropriate inputs as argu
 
 ### Your Answer: may be provided as a code file with single function within it.
 
+Partial credit - 1 pt
+The output is supposed to be an object (see above)
+Your code works in that you are logging if the number is even or odd but keep in mind, by trying to 
+DOM, it is happening so fast you only see the final result. Try .append() next time to see ALL the 
+results. 
+
+We were looking for something like (no HTML needed):
+
+const oddOrEven = input => {
+  let obj = {}
+
+  for (let i=1; i <= 5; i++){
+    obj[+i] = i%2 ? 'odd' : 'even'
+  }
+  return obj
+} 
+
+console.log(oddOrEven(5))
+

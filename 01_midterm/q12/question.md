@@ -10,3 +10,5 @@ Internal css
 ID styles are the next in heirarchy- they have an order of magnitude of importance above the next class. 
 Classes, attrubute selectors, and psudo classes are next, and have an order of magnitude of importance above the next class
 the least prioritized style is the element selector
+
+Good - 3pts
