@@ -9,13 +9,32 @@ console.log(marvel())
 //characters in the db
 console.log(list.length)
 
-//display characters match man- else error 
-let man = []
-    
-    for(let i=0; i<list.length; i++){
-        var vil = list[i].str.match(/man/g);
-        console.log(vil);
-        man.push.vil;}
+// let test = marvel().substring(0,3) 
+// console.log(test)
 
-    //if ( man.length=0)
-    //console.log('No chaacters met the reqest')
+// //display characters match man- else error 
+//     for(let i=0; i<list.length; i++){
+//         if (list[i].match(/Man/g))
+//             console.log(list[i]);
+//             }
+
+// list.forEach(matchMan)
+// function matchMan(element, index) {
+//     if (element.substring(0,3)=="Man"){
+//           matchMan.push(element)
+//         console.log(element.string)
+//     }
+//   }
+
+
+// let names = marvel.characters.filter(function(el){
+//                         return el.substring(0,3)=='Man'
+// })
+// console.log(names)
+
+let bat = marvel.characters.filter(el=>{
+    return el=='Batman'
+})
+//console.log(bat)
+let result = bat.length != 0 ? bat:'No Match Found'
+console.log(result)

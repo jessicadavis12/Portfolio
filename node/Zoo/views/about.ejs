@@ -1,0 +1,6 @@
+<h1>I am the about page</h1>
+
+<% zoo.forEach(el =>{%>
+  <% let {name, size, breed, country} = el %><p>
+     <%=name %> is an <%=size%> <%= breed %> from <%=country%></p>
+<% }) %> 
