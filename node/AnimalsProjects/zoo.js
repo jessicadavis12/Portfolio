@@ -14,10 +14,15 @@ console.log(list.length)
 //find all of the G enteries 
 
 
-for (let i=0; i<list.length; i++){
-    if (list[i].charAt(0) ==='g')
-    console.log(list[i]);
-}
+// for (let i=0; i<list.length; i++){
+//     if (list[i].charAt(0) ==='g')
+//     console.log(list[i]);
+// }
 
+let gLen = list.charAt(0, el=>{
+    return el =='b'
+})
+let result = gLen.length !=0? result:"No Match Found"
+console.log(result)
 
 

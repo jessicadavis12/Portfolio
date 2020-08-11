@@ -1,7 +1,17 @@
-<h1> I am the home page</h1>
+<%- include('partials/headers', {title: 'home'}) %> 
+<%- include('partials/navbar') %> 
 
-<% zoo.forEach(function(el){ %>
-    <%= el.breed %>
-<% }) %>
+<body>
+    <h1 class='text-uppercase'> I am the home page</h1>
+
+    <% zoo.forEach(function(el){ %>
+        <%= el.breed %>
+    <% }) %>
+
+<%- include('partials/footer')  %> 
+
+</body>
+</html>
+
 
 
