@@ -1,0 +1,12 @@
+<%- include('partials/headers', {title:'contact'}) %> 
+<%- include('partials/navbar') %> 
+<h1>Contact the following owners for more information</h1>
+
+<% zoo.forEach(function(el){ %>
+ <p>  <%= el.name %>
+    <%= el.owner.fname %> 
+    <%= el.owner.lname %> 
+    <%= el.owner.phone %> 
+<% }) %></p> 
+
+<%- include('partials/footer')  %> 

@@ -16,8 +16,12 @@ body, html{
     background-size: cover;
     height: 100%;  /*full screen heigt and centered */
 }
+<<<<<<< HEAD
 .card{
     margin-top: 50px; /* added this line*/
+=======
+.card{ /*styling for the blocks */
+>>>>>>> 8373146196334b024e4f8e8fbd43b2e4e766a22d
     background-color: #6699cc;
     border-radius: 15px;
     opacity: 0.5;
