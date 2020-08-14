@@ -2,15 +2,18 @@
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 30005
-const people  = require('./data')
+const people = require('./data');
 
 
 //route routing
 app.get('/', (req, res)=>{
     res.send('Made it')
+   
 })
 
 app.get('/home', (req, res)=>{
+    // res.send(people[req.params.name]);
+    console.log(people.name)
     res.render('home.ejs', {people})
 
 })

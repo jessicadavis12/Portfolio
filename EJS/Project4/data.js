@@ -1,4 +1,4 @@
-var people = [
+ let data = [
     {
         name: "George",
         description: "Lorem ipsum",
@@ -14,5 +14,6 @@ var people = [
         name: "Brenda",
         description: "Loreum Eplison",
         age: "46"
-    }
-] 
+    }]
+
+module.exports = data
