@@ -24,7 +24,7 @@ app.get('/priceResults', (req, res)=>{
         return response.json()
     })
     .then
-        res.render('index.ejs', {newprice: `data.bpi.${currency}.rate`})
+        res.render('priceresults.ejs', {newprice: `data.bpi.${currency}.rate`})
         console.log(currency)
     .catch(err => console.log('I am the error: ', err))
 })
