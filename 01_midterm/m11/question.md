@@ -10,7 +10,7 @@
 
 ### Answer: 3.
 
-
+Incorrect - #5
 
 ### B. The advantages of jQuery are, EXCEPT ..
 
@@ -22,3 +22,7 @@
 
 
 ### Answer:4
+
+Incorrect - jQuery, which is javascript, cannot be used on a server - hence why we need Node
+
+0pts

@@ -28,3 +28,5 @@ var index= myArray.length+1
         myArray.shift()
 //sets the array length to the number of elemets in the array- the plus one is so we can stop a zero
 //removes the front element until the counter reaches 0- at that time the array will be empty 
+
+Score - 3pts

@@ -21,3 +21,5 @@ myArray[]= myArray1.concat(myArray2);
 
 
 myArray.splice(2, 3);  will remove 3 elements starting at index position 2. 
+
+Score - 3pts

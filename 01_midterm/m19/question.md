@@ -9,3 +9,5 @@
 
 ### Answer:
 3
+
+Correct - 2pts - this is the most appropriate way. However, you can use #4 which is shorthand AND allows other values to be added besides just the color.

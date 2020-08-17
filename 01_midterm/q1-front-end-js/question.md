@@ -15,4 +15,5 @@ Input types are set to text- not number
 JS
 Var are not looking for values
 
+Correct - 3pts
 

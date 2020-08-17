@@ -17,3 +17,5 @@ Please answer the following with maximum 50 words each (keep it short):
 2. Git is useful for teams because
     1- allows colaboration among team members by managing the work in one place without writting over each others code. 
     2- allows teams to see revision change markups and communicte about the changes in one place. 
+
+    Correct - 3pts
