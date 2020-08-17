@@ -1,9 +1,11 @@
 const express = require('express')
 const app = express()
 const fetch = require('node-fetch')
-const { response } = require('express')
+let currency = `${("currencyOptions:checked").val}`;
+
 
 app.use(express.static('public'))
+
 const PORT = process.env.PORT || 30005
 
 let endpoint ='https://api.coindesk.com/v1/bpi/currentprice.json'
@@ -13,7 +15,7 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/priceResults', (req, res)=>{
-    let url = '${endpoint}'///append radio button selection and keys
+    let url = '${endpoint}/${req.params.bpi.code}';
     fetch(url)
     .then(response=>{
         if(!response.ok){
@@ -21,10 +23,9 @@ app.get('/priceResults', (req, res)=>{
         }
         return response.json()
     })
-    .then(data=>{
-        //console.log(data)
-        res.render('priceResults.ejs', {newprice: data} )
-    })
+    .then
+       // res.render('index.ejs', {newprice: `data.bpi.${currency}.rate`})
+        console.log(currency)
     .catch(err => console.log('I am the error: ', err))
 })
 

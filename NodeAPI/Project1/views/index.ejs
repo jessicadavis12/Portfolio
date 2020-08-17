@@ -5,26 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">    
     <h1>BitCoin Price App</h1>
     <form action="//priceResults.ejs" method="get">
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="USD" value="option1">
+            <input class="form-check-input" type="radio" name="currencyOptions" id="USD" value="USD">
             <label class="form-check-label" for="inlineRadio1">USD</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="GBP" value="option2">
+            <input class="form-check-input" type="radio" name="currencyOptions" id="GBP" value="GBP">
             <label class="form-check-label" for="inlineRadio2">GBP</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="EUR" value="option3">
+            <input class="form-check-input" type="radio" name="currencyOptions" id="EUR" value="EUR">
             <label class="form-check-label" for="inlineRadio3">EUR</label>
         </div>   
     <button type="submit" class="btn btn-primary">Get Price</button>
 </form>
 <h4>This is the current price:</h4>
+
+
 <a href="https://www.coindesk.com/price/bitcoin">Powered by CoinDesk</a>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -32,3 +35,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>    
 </body>
 </html>
+

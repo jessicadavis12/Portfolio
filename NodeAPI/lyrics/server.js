@@ -1,35 +1,37 @@
-const express = require('express')
-const app = express()
-const fetch = require('node-fetch')
+const express = require("express");
+const app = express();
+const $fetch = require("node-fetch");
 
-app.use(express.static('public'))
+app.use(express.static("public"));
 
-const PORT = process.env.PORT || 30005
+const port = process.env.PORT || 3000;
 
-//https://api.lyrics.ovh/v1/artist/title
+let endpoint = "https://api.lyrics.ovh/v1";
 
-let endpoint = 'https://api.lyrics.ovh/v1'
+app.get("/", function(req, res) {
+  res.render("home.ejs");
+});
 
-app.get('/', (req, res)=>{
-    res.render('home.ejs')
-})
-
-app.get('/lyricResults', (req, res)=>{
-    let url = `${endpoint}/${req.query.artist}/${req.query.title}`
-    fetch(url)
-    .then(response=> {
-        if(!response.ok){
-            throw Error('issue mf')
-        }
-        return response.json()
+app.get("/lyricResults", function(req, res) {
+  let url = `${endpoint}/${req.query.artist}/${req.query.title}`;
+  $fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        
+        throw Error(response.statusText);
+      }
+      return response.json();
     })
-    .then(data=>{
-        console.log(data)
-        data.lyrics.replace(/\n/g, '<br>')
-        res.render('lyricResults.ejs', {newlyrics: data.lyrics})
+    .then(data => {
+      let theLyrics = data.lyrics.replace(/\n/gi, "<br>");
+      res.render("lyricResults.ejs", { words: theLyrics });
     })
-    .catch(err => console.log('I am the error: ', err))
-    res.render('error.ejs', {error:'No Matches Found'})
-})
+    .catch(error => {
+      console.error("Error from network: ", error);
+      res.render("error.ejs", { error: "No matches found." });
+    });
+});
 
-app.listen(PORT, ()=>console.log(`App is listening on port ${PORT}`))
+app.listen(3000, function() {
+  console.log(`Listen on port ${port}`);
+});
