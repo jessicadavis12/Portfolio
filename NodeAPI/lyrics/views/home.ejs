@@ -1,14 +1,19 @@
+<%- include('partials/header') %> 
+<h1 class="text-center">Find the Lyrics of your favorite Song!!!</h1>
 
-
-
-
+<div class="container well">
     <form action="/lyricResults" method="get">
-    <label for="artist">Enter artist: </label>
-    <input type='search' id="artest" name="artist" placeholder="Enter your artist here">
-    <br>
-    <label for="title">Enter title: </label>
-    <input type='search' id="title" name="title" placeholder="Enter your title here">
-    <br>
-    <button type="submit">Submit</button>
+        <label for="artist">Enter artist: </label>
+        <input type='search' id="artest" name="artist" placeholder="Enter your artist here">
+        <br>
+        <label for="title">Enter title: </label>
+        <input type='search' id="title" name="title" placeholder="Enter your title here">
+        <br>
+        <button class="btn btn-danger" type="submit">Submit</button>
     </form>
+</div>
+
+<%- include('partials/footer')  %> 
+
+
 

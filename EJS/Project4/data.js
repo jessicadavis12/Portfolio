@@ -1,4 +1,4 @@
- let data = [
+ const person  = [
     {
         name: "George",
         description: "Lorem ipsum",
@@ -16,4 +16,4 @@
         age: "46"
     }]
 
-module.exports = data
+module.exports.person = person

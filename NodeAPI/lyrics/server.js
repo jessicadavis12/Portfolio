@@ -24,10 +24,12 @@ app.get('/lyricResults', (req, res)=>{
         return response.json()
     })
     .then(data=>{
-        //console.log(data)
-        res.render('lyricResults.ejs', {newlyrics: data})
+        console.log(data)
+        data.lyrics.replace(/\n/g, '<br>')
+        res.render('lyricResults.ejs', {newlyrics: data.lyrics})
     })
     .catch(err => console.log('I am the error: ', err))
+    res.render('error.ejs', {error:'No Matches Found'})
 })
 
 app.listen(PORT, ()=>console.log(`App is listening on port ${PORT}`))
