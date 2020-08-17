@@ -3,9 +3,9 @@ const express = require('express')
 const app = express();
 
 const PORT = process.env.PORT || 30005
-const person = require('/.data')
+const person = require('./data')
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 //route routing
 app.get('/', (req, res)=>{
@@ -14,3 +14,4 @@ app.get('/', (req, res)=>{
 
 //Listener
 app.listen(PORT, ()=>console.log(`App is listerning on port ${PORT}`))
+

@@ -16,4 +16,4 @@
         age: "46"
     }]
 
-module.exports.person = person
+module.exports.person = person;
