@@ -1,1 +1,17 @@
-<h1>I am the index</h1>
+<%- include('partials/header') %> 
+
+<body id='home-container' >
+    <%- include('partials/navbar')  %> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg">
+                <h1 class="text-white text-uppercase mx-auto text-center">
+                 In the mood to catch a flick?  See what movies are playing now.   
+                </h1>
+                <form action="/search" method="GET">
+                <button type="submit" class="btn btn-warning btn-lg text-white">
+                    Show me a list of Movies!
+                </button>
+                </form>
+<%- include('partials/footer')  %> 
+            
