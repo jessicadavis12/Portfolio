@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 let endpoint = "https://api.lyrics.ovh/v1";
 
 app.get("/", function(req, res) {
-  res.render("home.ejs");
+  res.render("index.ejs");
 });
 
 app.get("/lyricResults", function(req, res) {

@@ -1,0 +1,17 @@
+body{
+    background-color: lightblue;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    text-align: center;
+    border: darkblue solid 3px;
+}
+#btn{
+    background-color: darkblue;
+    border: solid 2px white;
+    border-radius: 15px;
+    font-size: 45px;
+    margin-top: 20px;
+    color: white;
+    padding: 25px,25px;
+}
