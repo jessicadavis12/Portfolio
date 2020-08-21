@@ -7,12 +7,18 @@ const PORT = process.env.PORT ||30005
 const fetch= require("node-fetch");
 const { response } = require('express');
 
+app.use(express.static("public"));
+
+
+let rate = '0.00'
+let symbol = '$'
+
 const url = 'https://api.coindesk.com/v1/bpi/currentprice.json'
 
 //Root Route
 app.get('/', (req, res)=>{
     //res.send('made it') verify server foundation
-    res.render('index.ejs')
+    res.render('index.ejs',{rate, symbol});
 })
 
 app.get('/price', (req, res)=>{
@@ -24,7 +30,9 @@ app.get('/price', (req, res)=>{
         return response.json();
     })
     .then(data =>{
-        res.render('index.ejs', {data})
+        symbol = data.bpi[req.query.Country].symbol;
+        rate =  data.bpi[req.query.Country].rate;
+        res.render('index.ejs', {symbol, rate})
     })
     .catch(error =>{
         console.error("Error ", error)

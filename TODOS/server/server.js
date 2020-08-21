@@ -35,10 +35,26 @@ app.get('/', (req, res)=>{
 app.get('/todo', (req, res)=>{
     res.send({toDoArray})
 });
+app.post("/todo", function(req, res){
+    //array of hard-coded data for testing purposes
+    let newTodo = {
+        id: 4,
+        description: "Buy more stuff",
+        isComplete: false
+    }
+    // append the new todo object to toDoArray array
+    toDoArray.push(newTodo);
+    // displaying in Terminal for testing/debugging purposes
+    console.log(toDoArray);
+    //set status to 201 which is successful
+    //send back json version of newTodo object
+    //no need to send whole array back, just the new todo item
+    res.status(201).json(newTodo);
 
-app.post('/todo', (req, res)=>{
-    res.send(toDoArray.push({id:"4", descripton:"Buy more stuff", isComplete: false}))
-});
+
+// app.post('/todo', (req, res)=>{
+//     res.send(toDoArray.push({id:"4", descripton:"Buy more stuff", isComplete: false}))
+// });
 
 app.delete('/todo/:todoid', function(req, res){
     // Get the requestedToDoId from the req.params
