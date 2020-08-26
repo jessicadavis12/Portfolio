@@ -20,7 +20,7 @@ app.get('/searchresults', (req, res)=>{
     .then(response =>{
         let results = response.jsonBody.businesses;
         console.log(results)
-        //res.render("searchresults.ejs", {results: results, location : req.query.locale });
+        res.render("searchresults.ejs", {results: results, location : req.query.locale });
     })
     .catch((err)=>
    {console.log('catch error:', err)

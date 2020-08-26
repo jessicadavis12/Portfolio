@@ -1,12 +1,29 @@
-<%- include ('partials/headers') %>
+<%- include ('partials/header') %>
 
-<div>
-    <h1>Here are your results for Resturants in <%= location %> </h1>
-    
-   <% results.forEach(el) %> 
-    
-   <% businesses[0].ratings%>
-    <% businesses[0].url %>
 
+    <h1>Here are your results for Resturants in <%= location %>; </h1>
+    <div class=  "container well">
+        <table class="table">
+        <tr>
+            <th>Distance</th>
+            <th>Name</th>
+            <th>Rating</th>
+        </tr>
+       
+   <% results.forEach(function(display){ %>
+    <%  if ((display.rating%1)==0){ %>  
+    <%   stars = 'regular/regular_' + display.rating + '.png';%>
+    <% } else { %> 
+        <% stars = '/regular/regular_' + Math.floor(display.rating) + '_half.png'; %> 
+    <% }; %> 
+
+    <tr class = "listResults">
+
+        <td><h4><% ((display.distance)/1609.34).toFixed(1)%> miles </h4></td>
+        <td><h3><a href="<%=display.url%>" target="blank"><%=display.name %> </a> </h3></td>
+        <td><h4><img src="<%= stars%>" alt = "stars"></h4></td>
+    </tr>
+   <% }); %>
+</table> 
 </div>
 <%- include('partials/footer') %>
