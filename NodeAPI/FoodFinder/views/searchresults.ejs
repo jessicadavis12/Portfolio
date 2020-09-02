@@ -11,7 +11,7 @@
         </tr>
        
    <% results.forEach(function(display){ %>
-    <%  if ((display.rating%1)==0){ %>  
+    <%  if ((display.rating%2)==0){ %>  
     <%   stars = 'regular/regular_' + display.rating + '.png';%>
     <% } else { %> 
         <% stars = '/regular/regular_' + Math.floor(display.rating) + '_half.png'; %> 

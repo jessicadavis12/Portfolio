@@ -18,7 +18,7 @@ app.get('/getImage', (req, res)=>{
    fetch(url)
    .then((response)=>{
        if (!response.ok){
-         throw Error('Jessica is not working')
+         throw Error('Error from the back end')
         //return response.json()
        }
        return response.json()
