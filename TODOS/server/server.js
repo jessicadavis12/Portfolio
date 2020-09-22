@@ -16,17 +16,21 @@ app.use(cors());
 
 const port = process.env.PORT || 3000;
 
+app.use(express.static('client'))
+
 //note: how to convert to mongoose
 // 1.build a connection
-// install mongose
+// install mongoose
 // connect
 const mongoose = require('mongoose');
 const db = 'jd_todo_list'
 const url = 'mongodb://localhost:27017/'+ db
 
 mongoose.connect(url, 
-{useNewUrlParser: true, 
-useUnifiedTopology:true})
+    {
+        useNewUrlParser: true, 
+        useUnifiedTopology:true
+    })
 //
 //
 .then(()=>console.log(`Mongo db  ${db} running`))
@@ -36,7 +40,7 @@ useUnifiedTopology:true})
 // schema
 //model
 
-let todoSchema = new mongoose.Schema({
+let todoSchema = mongoose.Schema({
     description: {
         type:String, 
         required: [true, 'Must have a description']
@@ -45,10 +49,9 @@ let todoSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     }
-    }
-)
+})
 
-let TodoModel = mongoose.model('todos', todoSchema)
+let TodoModel = mongoose.model('todo', todoSchema)
 
 //3) build queries - crud
 //a read with mongoose-> .find()
@@ -68,7 +71,7 @@ app.get("/todos", function(req, res){
             console.log('Error finding documents from database', error)
         }else{
             console.log('My Results:', results)
-            res.json(results);
+            res.status(220).json(results);
         }
     })
     
@@ -79,27 +82,29 @@ app.post("/todos", function(req, res){
     let newTodo = new TodoModel({
         description: req.body.description,
     })
-    newTodo.save((error, results=>{
+    newTodo.save((error, result)=>{
         if(error){
             console.log('Error save docment to db:', error)
+            mongoose.disconnect()
         }else{
-            res.status(201).json(newTodo)
+            console.log('Saves new todo:', result)
+            res.status(201).json(result);
         }
-    }))
+    })
 })
     
 
 //delete data
 app.delete("/todos/:id", function(req, res){
     // get the requestedToDoId from req.params and ensure it is a number
-    let requestedToDoId = parseInt(req.params.id);
-    TodoModel.deleteOne({description:requestedToDoId}, function(req, res){
+    let requestedToDoId = req.params.id;
+    TodoModel.findByIdAndDelete(requestedToDoId, function(err, todo){
         if (err){
         console.log(err);
-        return res.status(500).send();
-        }
-    return res.status(200).send();
-    })
+         res.status(500).send('ID does not exist');
+        } else{
+         res.status(200).send(todo);
+    }
 })
 
 
@@ -129,23 +134,18 @@ app.delete("/todos/:id", function(req, res){
 //use findOneandupdate 
 app.put("/todos/:id", function(req, res){
   // get the requestedToDoId from req.params and ensure it is a number
-    let requestedToDoId = parseInt(req.params.id);
-    TodoModel.findOne({_id: requestedToDoId}, function(err,foundObject){
-        if (err){
-            console.log(err);
-            res.status(500).send()
+    let requestedToDoId = req.params.id;
+    //
+    TodoModel.findById(requestedToDoId, function (err, todo) {
+        if (err)
+         {res.status(600).send('ID does not exist for updating')
         } else {
-            if(!foundObject){
-                res.status(404).send();
-            }else {
-                if(req.body.isComplete){
-                requestedToDo.isComplete = !requestedToDo.isComplete;
-
-                }
+            todo.isComplete = !todo.isComplete;
+            todo.save(); 
+            res.status(202).send(todo);
             }
-        }
     })
-})
+})})
     //find the todo in the array that matches the todoId passed in
 //     let requestedToDo = toDoArray.find(function(todo){
 //         return todo.id === requestedToDoId;
