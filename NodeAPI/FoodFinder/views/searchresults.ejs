@@ -5,25 +5,24 @@
     <div class=  "container well">
         <table class="table">
         <tr>
-            <th>Distance</th>
-            <th>Name</th>
             <th>Rating</th>
+            <th>Name</th>
+            <th>Phone</th>
         </tr>
        
-   <% results.forEach(function(display){ %>
-    <%  if ((display.rating%2)==0){ %>  
-    <%   stars = 'regular/regular_' + display.rating + '.png';%>
-    <% } else { %> 
-        <% stars = '/regular/regular_' + Math.floor(display.rating) + '_half.png'; %> 
-    <% }; %> 
-
-    <tr class = "listResults">
-
-        <td><h4><% ((display.distance)/1609.34).toFixed(1)%> miles </h4></td>
-        <td><h3><a href="<%=display.url%>" target="blank"><%=display.name %> </a> </h3></td>
-        <td><h4><img src="<%= stars%>" alt = "stars"></h4></td>
+   <% results.forEach(function(el){ %>
+    <% if ((el.rating %1)==0){ %>
+    <% stars = '/graphic/stars_regular_'+ el.rating + '.png'; %> 
+    <% } else{  %>    
+    <% stars = '/graphic/stars_regular_' + Math.floor(el.rating) + '_half.png'; %>  
+    <% } %> 
+        <tr class = "listResults">
+        <td><img src="<%= stars  %>" alt="stars"></a> </td>
+        <td><h3><a href="<%=el.url%>" target="blank">
+            <%=el.name %> </a> </h3></td>
+        <td><h4><%= el.display_phone%></h4></td>
     </tr>
-   <% }); %>
-</table> 
+    <% }); %>
+    </table> 
 </div>
 <%- include('partials/footer') %>

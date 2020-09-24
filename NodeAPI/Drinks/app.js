@@ -3,6 +3,8 @@ const fetch = require('node-fetch');
 const { response } = require('express');
 const app = express();
 
+app.use(express.static('public'))
+
 const PORT = process.env.PORT || 3000;
 
 const initDrink = {
@@ -21,7 +23,7 @@ const initDrink = {
     imgSrc3:"https://www.thecocktaildb.com/images/ingredients/Green%20Chartreuse-Small.png"
 }
 
-app.use(express.static('public'))
+
 
 let url = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
 

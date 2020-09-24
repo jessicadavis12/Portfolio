@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>BitCoin Price App</h1>
+<form action="/price" method="GET">
+<input type="radio" name="country" value="USD">
+<label for="USD">USD</label>
+<input type="radio" name="country" value="GBP">
+<label for="GBP">GBP</label>
+<input type="radio" name="country" value="EUR">
+<label for="EUR">EUR</label>
+
+<button type="submit">Get Price</button>
+</form>
+
+<h1>This is the current price: </h1>
+<h3><%- symbol %>  <%= rate  %> </h3>
+
+<a href="">Powered by CoinDesk</a>
+    
+</body>
+</html>

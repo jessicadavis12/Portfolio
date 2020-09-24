@@ -8,6 +8,8 @@ const casual = require('casual')
 const mongoose = require('mongoose');
 const { string } = require('casual');
 
+app.use(express.static('public'))
+
 //Connection
 const url = 'mongodb://localhost:27017/clients'
 mongoose.connect(url, {useNewUrlParser:true, useUnifiedTopology: true})

@@ -16,7 +16,7 @@ INSERT INTO todos.todos(
 ) RETURNING id as _id, *;
 
 DELETE FROM todos.todos
-WHERE id = 1143;
+WHERE id = 1144;
 
 UPDATE todos.todos
 SET iscomplete =  NOT iscomplete

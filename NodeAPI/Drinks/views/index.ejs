@@ -24,15 +24,15 @@
         
         <div class="col-lg-8 col-sm-12">
             <div class="row test-center" id="ingredientsDisplay">
-                <% let count = 1 %> 
-                <% while (data[`strIngredients${count}`]) %> 
-                <% let ingredients = data[`strIngredients${count}`]%>
-                <% let measurement = data[`strMeasure${count}] %> 
+                <%= let count = 1 %> 
+                <%= while (data[`strIngredients${count}`]) %> 
+                <%= let ingredients = data[`strIngredients${count}`]%>
+                <%= let measurement = data[`strMeasure${count}] %> 
                 <div class="thumb_container col-lg-2 col-xs-4">
                     <img class="thumb" scr="https://www.thecocktaildb.com/images/ingredients/<%= ingredient%>Small.png" >
-                    <p><%= measurement %><<% ingredient %> /p>
+                    <p><%= measurement %><%= ingredient %> </p>
                 </div>
-                <% count ++ %>
+                <%= count ++ %>
                 <% } %>  
             </div>   
             <div class="row">

@@ -78,35 +78,38 @@ app.post("/todos", function(req, res) {
 
 //delete
 app.delete("/todos/:id", function(req, res){
-    let requestedToDoId = req.parms.id;
+    let requestedToDoId = parseInt(req.params.id);
     let query = `
     DELETE FROM todos.todos
-    WHERE id = ${requestedToDoId} `
-    dbconn.query(query)
-    .then(function(data){
-        res.json(data.rows[0])
+    WHERE id = ${requestedToDoId} `;
+    //console.log(requestedToDoId)
+    //console.log(query)
+    dbconn.query(query, function(err, result){
+        if(err){
+            res.status(400).send('Id does not exist for deletion')
+        } else {
+            res.status(201).send(result)
+        }
     })
-    .catch(function(err){
-        res.json({code:400, message:err.stack, err})
-    })
-})
+});
 
 //update
 app.put("/todos/:id", function(req, res){
-    let updateid = req.params.id;
     let query = `
     UPDATE todos.todos
     SET iscomplete =  NOT iscomplete
-    WHERE id = updatedid 
+    WHERE id = ${req.params.id} 
+    RETURNING *;
     `
-    dbconn.query(query)
-    .then(function(data){
-        res.json(data.rows[0])
+    //console.log('query is : ', query)  
+    dbconn.query(query, function(err, result){
+        if (err){
+            res.status(660).send('Id does not exist for updating')
+        } else {
+            res.send(result.rows)
+        }
     })
-    .catch(function(err){
-        res.json({code:400, message:err.stack, err})
-    })
-})
+});
 
 
 app.listen(port, () => {

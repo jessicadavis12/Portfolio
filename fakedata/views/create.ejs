@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Random Data App</h1>
-    <ul>
-        <li><a href="createPage">create data</a></li>
-        <li><a href="readPage">read data</a></li>
-    </ul>
+<%- include('partials/header') %> 
+<%- include('partials/nav') %>
+<div class="center">
     <h1>Create New Data</h1>
     <form action="/createData">
-        <button type="submit" style="background-color: aquamarine">Click for fake data </button>
+        <button type="submit" class="btn btn-success" >Click for generated data </button>
     </form>
-</body>
-</html>
+</div>    
+<%- include('partials/footer')  %> 

@@ -1,5 +1,5 @@
 {
-  "name": "drinks",
+  "name": "bitcoin",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -11,7 +11,6 @@
   "dependencies": {
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "lint": "^0.7.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   }
 }
