@@ -6,7 +6,7 @@
 1. db.restaurants.find({ "borough" : "Queens" })
 
 There may be multiple right answers. Indicating all of the right answers and none of the wrong answers is requested for full credit.
-
+  4. db.restaurants.find({ "borough" : "Queens" })
 
 ### MONGODB CONNECTION:
 

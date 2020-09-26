@@ -6,3 +6,5 @@
 1. Tells the user agent what to expect in the response from another machine, e.g. a restful API?
 
 ### Answer:
+
+2. Formats the web page

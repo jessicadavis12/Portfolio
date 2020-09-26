@@ -8,3 +8,6 @@
 1. undefined 'Julia Roberts'
 1. 'Julia Roberts' 'Julia Roberts'
 1. 'Julia Roberts' undefined
+
+
+4. getName isn't defined beyond the scope of the star variable code.  

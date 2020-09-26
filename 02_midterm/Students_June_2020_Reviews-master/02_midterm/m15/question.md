@@ -8,3 +8,6 @@
 1. 2
 1. (nothing would happen)
 1. foo    
+
+
+1. the console.log was called when the function was returning 1.  The function was not called again after it was returning 2. 

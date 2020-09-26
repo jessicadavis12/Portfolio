@@ -7,3 +7,5 @@
 1. ... possibly has duplicates in the column it belongs to
 
 Pick all true statements
+
+4 and 5 
