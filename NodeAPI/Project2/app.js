@@ -21,12 +21,12 @@ app.get('/search', (req, res)=>{
     fetch(url2)
     .then(response =>{
         if (!response.ok){
-        throw Error("we seem to have a problem");
+        throw Error("Problem fetching results");
     }
     return response.json();
     }) 
     .then(data => res.render('results.ejs', {data:data.results}))  
-    .catch(error => console.error("We seem to have problems", error))
+    .catch(error => console.error("Problem fetching results", error))
 })
 
 app.listen(PORT, ()=>console.log(`App is listening on port ${PORT}`))
