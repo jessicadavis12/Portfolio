@@ -9,3 +9,7 @@
 Pick all true statements
 
 4 and 5 
+
+Partial credit - 2pts
+
+1 is also correct

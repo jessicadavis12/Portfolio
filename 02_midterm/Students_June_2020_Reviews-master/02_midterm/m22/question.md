@@ -20,3 +20,5 @@ FROM employees m
 INNER JOIN employees e ON (m.employee_id = e.manager_id)
 LEFT JOIN departments d ON (e.department_id = d.department_id)
 LEFT JOIN employees dm ON (d.manager_id = dm.employee_id);
+
+Correct - Great Job!!! - 3pts

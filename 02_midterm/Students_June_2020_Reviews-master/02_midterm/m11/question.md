@@ -10,3 +10,9 @@ Choose all correct answers. All answers needed for full credit.
 
 ### Answer:
 2, 4, 5 
+
+Partial credit - 2pts
+
+#2 and #5 are correct. 
+As for #4 - how did we receive the dog image with that API? Lyrics? Weather? We used the 
+GET method (request) to receive the data.

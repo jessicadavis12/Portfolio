@@ -8,6 +8,9 @@
 There may be multiple right answers. Indicating all of the right answers and none of the wrong answers is requested for full credit.
   4. db.restaurants.find({ "borough" : "Queens" })
 
+Partial credit - 1.5pts
+#2 will also work - https://docs.mongodb.com/manual/reference/operator/query/eq/
+
 ### MONGODB CONNECTION:
 
 If you'd like to test your answer, connect to a mongo db instance as follows:

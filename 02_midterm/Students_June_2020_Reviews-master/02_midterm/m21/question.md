@@ -9,3 +9,5 @@
 ### Answer:
 
 3 is not mandatory that the server will be able to provide the data as preferred by a client
+
+Correct - 3pts

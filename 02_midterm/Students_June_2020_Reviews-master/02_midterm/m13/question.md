@@ -8,3 +8,5 @@
 Pick one correct answer.
 
 4
+
+Correct - 3pts

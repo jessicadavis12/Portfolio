@@ -11,3 +11,13 @@
 
 
 1. the console.log was called when the function was returning 1.  The function was not called again after it was returning 2. 
+
+Incorrect - 0pts
+
+2
+
+Explanation:
+
+In the definition phase foo is defined and then redefined.
+
+In the execution phase the second version of foo is invoked and 2 is returned.

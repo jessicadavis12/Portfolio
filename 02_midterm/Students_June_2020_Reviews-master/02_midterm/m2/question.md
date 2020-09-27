@@ -11,3 +11,6 @@
 ### Answer:
 
 5. Select
+
+PARTIAL credit - 2 pts
+Update is the other one.

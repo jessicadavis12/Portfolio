@@ -7,3 +7,5 @@
 
 ### Answer:
 3. waits and runs after the requested get method returns with data or error
+
+CORRECT - 3pts
