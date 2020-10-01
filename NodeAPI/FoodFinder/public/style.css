@@ -1,0 +1,33 @@
+*{
+    font-family: 'Architects Daughter', cursive;
+}
+
+.home{
+    background:url('/images/home.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    margin: auto;
+    padding: 40px 50px 40px 50px;
+
+}
+.contact{
+    background:url('/images/contact.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    margin: auto;
+    padding: 40px 50px 40px 50px;
+
+}
+#results{
+    background:url('/images/results.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+   
+
+}

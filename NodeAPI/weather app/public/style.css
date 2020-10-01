@@ -24,8 +24,12 @@
   
   .card {
     border: grey solid 1px;
-    width: 25%;
-    height: 25vh;
+    width: 50%;
+    height: 50vh;
+    text-align: center;
     display: inline-block;
     box-shadow: 3px 3px 10px grey;
+    margin: 200px;
+    padding-top: 70px;
+
   }
