@@ -16,17 +16,35 @@
 // Using these parameters, create the function that will calculate Bob's and other partier's BAC.
 
 
+// function profile(name, weight, gender, hours, oz, ABV){
+//     this.name=name;
+//     this.weight = weight;
+//     this.gender=gender;
+//     this.hours=hours;
+//     this.oz = oz;
+//     this.ABV=ABV
+
+// }
+
+
+// `var ${name.value}`= new profile `(${name.value}, ${weight.value}, ${gender.value}, ${hours.value}, ${oz.value}, ${ABV.value} )`
+
+
+
+
+
 function calculate(){
     let W = parseFloat(`${weight.value}`)
-    console.log (W);
-    let A = parseFloat(`${oz.value}*${ABV.value}`)
-    console.log (A);
+    //console.log (W);
+    //console.log (`${oz.value} * ${ABV.value}`) 
+    let A = (parseFloat(`${oz.value}`) * parseFloat(`${ABV.value}`))
+    //console.log (A);
     let H = parseFloat(`${hours.value}`)
-    console.log (H);
-    
-    let r = parseFloat(`${radio.value}checked == "male" ? .73:.66`)
-    console.log (r);
+    //console.log (H);
+    let gender = $("input[name=gender]:checked".val)
+    //console.log (gender)
+    let r = parseFloat( gender  == "male" ? .73:.66)
+    //console.log (r);
     let BAC = parseFloat((((A*5.14)/(W*r))-0.15) * H)
-  
     console.log (BAC)
 document.getElementById("return").innerHTML = "BAC"}
