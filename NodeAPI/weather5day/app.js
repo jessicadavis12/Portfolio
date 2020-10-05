@@ -5,7 +5,7 @@ const { query, response } = require('express');
 
 const PORT = process.env.PORT || 3005
 
-let url = 'https://www.metaweather.com/api/location/2357536/';
+let url = 'https://www.metaweather.com/api/location/';
 
 app.use(express.static('public'));
  

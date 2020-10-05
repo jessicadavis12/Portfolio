@@ -24,6 +24,7 @@ app.get("/lyricResults", function(req, res) {
     })
     .then(data => {
       let theLyrics = data.lyrics.replace(/\n/gi, "<br>");
+      console.log(theLyrics)
       res.render("lyricResults.ejs", { words: theLyrics });
     })
     .catch(error => {

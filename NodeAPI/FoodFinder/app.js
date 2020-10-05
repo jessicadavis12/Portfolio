@@ -12,10 +12,21 @@ app.get('/', (req, res)=>{
    res.render("home.ejs")
 })
 
+app.get('/about', (req, res)=>{
+    //res.send('it worked')
+    res.render("about.ejs")
+ })
+
+app.get('/contact', (req, res)=>{
+    //res.send('it worked')
+    res.render("contact.ejs")
+ })
+
 app.get('/searchresults', (req, res)=>{
     client.search({
         location: req.query.locale,
-        limit: 10
+        limit: 10,
+        open_now: true
     })
     .then(response =>{
         let results = response.jsonBody.businesses;

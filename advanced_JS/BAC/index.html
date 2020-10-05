@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="styleshet" href="style.css">
+
+    <title>BAC Calculator!</title>
+  </head>
+  <body>
+<div class = "container" id="cal">
+<h1>Don't Drive Drunk!</h1>
+<form onsubmit="calculate()">
+<label for ="name">Name</label><br> 
+<input type = "text" id="name" name="name" placeholder="First Name"><br>
+<label for ="weight">Weight</label><br> 
+<input type = "text" id="weight" name="weight" placeholder="Weight in Pounds (lbs)"><br> 
+<input type="checkbox" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="checkbox" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+<label for ="hours">How long have you been drinking?</label><br> 
+<input type = "text" id="hours" name="hours" placeholder="How many hours has it been?"><br> 
+<label for ="">How many ounces of alcohol have you had?</label><br> 
+<input type = "text" id="oz" name="oz" placeholder="Number of ounces of Alcohol consumed (oz)"><br> 
+<label for ="abv">ABV of your beverage, using decimal</label><br> 
+<input type = "text" id="ABV" name="ABV" placeholder="ABV"><br> 
+<button type="submit">Get your BAC</button>
+</form>
+
+</div>
+<h1>Your BAC is:</h1>    
+<h3 id=return>Your Score</h1>
+
+    <!-- Optional JavaScript -->
+    <script src="bac.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

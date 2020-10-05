@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const request = require('request')
-let url ='https://www.metaweather.com/api/location/2357536/';
+let endpoint ='https://www.metaweather.com/api/location';
 const PORT = process.env.PORT || 30005
 
 app.use(express.static('public'));
@@ -13,6 +13,8 @@ app.get('/', (req, res)=>{
 
 app.get('/results', (req, res)=>{
     //make the call
+    let location = req.query.location;
+    let url = `${endpoint}/search/?query=${location}`
     request(url, function(error, response, body){
     console.log(response)
     let parsedData = JSON.parse(body);

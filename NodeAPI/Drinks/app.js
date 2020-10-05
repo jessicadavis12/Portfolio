@@ -1,6 +1,7 @@
 const express = require ('express')
 const fetch = require('node-fetch');
-const { response } = require('express');
+
+
 const app = express();
 
 app.use(express.static('public'))
@@ -35,17 +36,15 @@ app.get('/', (req, res)=>{
 });
 
 app.get('/getRandom', (req, res)=>{
-    fetch.url
+    fetch(url)
     .then((response)=>{
         if (!response.ok){
             throw Error('There is an errror')
         }
         return response.json()
     })
-    .then(data=>{res.render('index.ejs', {data:data.drinks[0]})})
+    .then(data=>{res.render('index.ejs', {data:drinks[0]})})
     .catch((err)=>
-    {console.log('catch error:', err)
-    res.end()
+    console.log('catch error:', error))
 })
-})
-app.listen(PORT, ()=>console.log(`App is listening on port ${PORT}`) );
+app.listen(PORT, ()=>{console.log(`App is listening on port ${PORT}`)});
