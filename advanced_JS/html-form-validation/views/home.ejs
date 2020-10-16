@@ -1,25 +1,52 @@
 <%- include("partials/header") %> 
-    
-    <form action="/submit" method="POST">
-        <div>
-        <label for="fname">First Name</label></br>
-        <input type="text" name="fname" placeholder="First Name"> 
-        </div>
-        <div>
-        <label for="lname">Last Name</label></br>
-        <input type="text" name="lname" placeholder ="Last Name" > 
-        </div>
-        <div>
-        <label for="email">Email Address</label></br>
-        <input type="email" placeholder="Email Address" name="email" maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"">
-        </div>
-        <div>
-        <label for="phone">Phone Number</label></br>
-        <input type="tel" placeholder = "Phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-        </div>
-        <div>        
-        <label for="country">Country</label></br>
-            <select id="country" name="country" class="form-control">
+    <div class="container">
+     <div class="row">   
+    <h1>Software Developer - Dream Company </h1>
+     </div>
+    <h4>Software Development - United States </h4>
+    <p>Thank you for considering a career at Dream Company.  Please take a minute to fill out the following form.</p>
+    </div>
+    <form action="/submit" method="POST" name="application">
+        <div class="container">
+        
+            <div class="row">
+                <div class="col">
+                    <label for="fname">First Name* </label>
+                </div>
+                <div class="col">
+                    <input type="text" name="fname" placeholder="First Name" autofocus maxlength="20" required> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="lname">Last Name* </label>
+                </div>
+                <div class="col">
+                    <input type="text" name="lname" placeholder ="Last Name" autofocus maxlength="20" required> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="email">Email Address*</label>
+                </div>
+                <div class="col">
+                    <input type="email" placeholder="Email Address" name="email" maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                   <label for="phone">Phone Number*</label>
+                </div>
+                <div class="col">
+                    <input type="tel" placeholder = "123-456-7890" name="phone" title = "123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                </div>
+            </div>        
+            <div class="row">
+                <div class="col">
+                    <label for="country">Country*</label>
+                </div>
+                <div class="col">
+                <select id="country" name="country" class="form-control">
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>
@@ -266,23 +293,29 @@
                 <option value="Zimbabwe">Zimbabwe</option>
             </select>
             </div>
-            
-            <div>
-            <label for="age">Are you over 18?</label></div></br>
-            <input type="radio" id="yes" name="age" value="yes" checked="checked">
-            <label for="yes" >Yes</label>
-            <input type="radio" id="no" name="age" value="no">
-            <label for="no">No</label>
+        </div>
+        <div class="row">
+                <div class="col">
+                    <label for="age">Are you over 18?</label>
+                </div>
+                <div class="col">
+                    <input type="radio" id="yes" name="age" value="yes" checked="checked">
+                    <label for="yes" >Yes</label>
+                    <input type="radio" id="no" name="age" value="no">
+                    <label for="no">No</label>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="resume">Attach Resume</label>
             </div>
-            
-            <div>
-            <label for="no">No</label>    
-            <label for="resume">Attach Resume</label>
-            <input type="file" name="resume" accept=".pdf, .doc">
+            <div class="col">
+                <input type="file"  name="resume" accept=".pdf, .doc, RTF, and TXT">
             </div>
-            <div>
-                <button onsubmit="addone()">Submit</button>
+        <div>
+                <button class="btn btn-secondary">Submit</button>
               </div>
     </form>
-
+</div>
+<p> * indicates a required field.</p>
     <%- include("partials/footer") %> 

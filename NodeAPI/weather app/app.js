@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const request = require('request')
-let endpoint ='https://www.metaweather.com/api/location';
+let endpoint ='https://www.metaweather.com/api/location/2487956/';
 const PORT = process.env.PORT || 30005
 
 app.use(express.static('public'));
@@ -12,15 +12,15 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/results', (req, res)=>{
-    //make the call
-    let location = req.query.location;
-    let url = `${endpoint}/search/?query=${location}`
-    request(url, function(error, response, body){
-    console.log(response)
-    let parsedData = JSON.parse(body);
-    console.log (parsedData);
-    res.render('results.ejs', {data: parsedData})
-    })
+  request(endpoint, function(error, response, body){
+      //Middleware API endpoint , error, request.Response, req.body 
+      if(!error && response.statusCode ==200){
+        let parsedData = JSON.parse(body);
+        console.log(parsedData)
+        res.render("results.ejs", {data:parsedData})
+
+      }
+  })  
 })
 
 app.listen(PORT, ()=>console.log(`App is listening on port ${PORT}`))

@@ -1,35 +1,48 @@
 
-* {
-    margin: 0;
+body,
+div {
+    margin: 50px;
     padding: 0;
-    border: none;
-  }
-  
-  h1 {
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .card_container {
-    width: 25%;
-    margin: 3% auto;
-    text-align: center;
-  }
-  
-  .card_container h2,
-  .card_container p {
-    margin: 2% 0;
-  }
-  
-  .card {
-    border: grey solid 1px;
-    width: 50%;
-    height: 50vh;
-    text-align: center;
-    display: inline-block;
-    box-shadow: 3px 3px 10px grey;
-    margin: 200px;
-    padding-top: 70px;
 
-  }
+}
+
+body {
+    background-color: darkblue;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center; 
+    color: white;
+    text-shadow: 2px 2px 0 black;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.weather {
+    background-color: lightblue;
+    display: inline-block;
+    width: 14%;
+    height: 100%;
+    margin: 0 1%;
+}
+
+form {
+    width: 50%;
+    margin-left: 35vw;
+}
+
+input {
+    text-align: center;
+    height: 30px;
+    width: 300px;
+}
+
+button {
+    background: lightblue;
+}

@@ -41,28 +41,19 @@
 // }
 //create a names and age array
 
-const names = ["George", "Martha", "Sally"];
-const age = [23, 25, 6]
-
-const tbody = document.querySelector("tbody")
-const fillthehouse = (){
-
-    for(let i=0; i<names.length; i++)
-    tbody.insertAdjacentHTML('beforeend', `
-    <tr>
-     <td>${names[i]}</td>
-     <td>${ages[i]}</td>
-    </tr>
-    `)
+// create an age and names array 
+const names = ["George", "Martha", "Sally"]
+const ages = [23, 26, 5]
+const tbody = document.querySelector('tbody')
+const fillHouse = () => {
+    for(let i = 0; i < names.length; i++){
+        // names[0] == "George"
+        // ages[0] == 23
+        tbody.insertAdjacentHTML('afterbegin', `
+            <tr>
+                <td>${names[i]}</td>
+                <td>${ages[i]}</td>
+            </tr>
+        `)
+    }
 }
-
-var table = {
-   person1:["George", 23],
-   person2:["Martha", 26],
-   person3:["Sally", 5],
-            }
-
-function myFunction() {
-    var h = document.getElementById("myH2");
-    h.insertAdjacentHTML("afterend", "<p>My new paragraph</p>");
-  }

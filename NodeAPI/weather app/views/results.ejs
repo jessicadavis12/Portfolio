@@ -9,12 +9,20 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<h1>Results</h1>
-    <div class="card">
-    <h2>The forecast for is: <%= data.consolidated_weather[0].weather_state_name %> </h2>
-    <h2>The low temp for today is: <%=  data.consolidated_weather[0].min_temp  %></h2>
-    <h2>The high temp for today is: <%= data.consolidated_weather[0].max_temp %> </h2>
-    <h2>The humidity for today is: <%= data.consolidated_weather[0].humidity  %>  </h2>
+
+<h1><%= data.title %> for <%= data.time %>  </h1>
+    <div class="container">
+        <% data.consolidated_weather.forEach(newData => { %>
+            <% let{weather_state_name, weather_state_abbr, max_temp, min_temp, humidity}=newData%>
+            <% let imageLink = `https://www.metaweather.com/static/img/weather/${weather_state_abbr}.svg` %>
+            <div class="weather">
+                <img src = <%=  imageLink %> width='50' height='50' alt=""><%= weather_state_name%>
+                <p> Max: <%= Math.round((max_temp*1.8)+32) %>&#8457;</p>
+               <p> Min: <%= Math.round((min_temp*1.8)+32) %>&#8457;</p>
+               <p> Humidity: <%= humidity %> </p>
+            </div>
+       <% })%>
+
     </div>
     
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

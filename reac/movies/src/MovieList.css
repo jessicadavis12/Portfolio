@@ -1,0 +1,11 @@
+.MovieList{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+@media(max-width:580px)
+{
+    .MovieList{
+        display: block;
+    }
+}

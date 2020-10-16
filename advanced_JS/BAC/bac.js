@@ -47,4 +47,10 @@ function calculate(){
     //console.log (r);
     let BAC = parseFloat((((A*5.14)/(W*r))-0.15) * H)
     console.log (BAC)
-document.getElementById("return").innerHTML = "BAC"}
+    bac : ()=>{
+        return this.BAC;
+    }
+
+
+document.getElementById("return").innerHTML = bac();
+}
