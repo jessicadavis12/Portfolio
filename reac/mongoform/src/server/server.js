@@ -2,7 +2,6 @@ const express = require('express');
 const app =  express();
 const cors= require('cors');
 const BP = require('body-parser');
-const morgan = require('morgan');
 require('dotenv').config()
 const mongoose = require('mongoose')
 
@@ -10,7 +9,6 @@ const mongoose = require('mongoose')
 app.use(cors(),
     BP.urlencoded({extended: false}),
     BP.json,
-    logger('dev')
     )
 
 const PORT = process.env.PORT || 3000;
@@ -48,10 +46,26 @@ let formSchema = new mongoose.Schema({
     }
 })
 
-let FormModel = mongoose.model("Form", formSchema )
+let FormM = mongoose.model("Form", formSchema )
 
 app.get('/', (req, res)=>{
     res.send('root')
+})
+
+app.post('/', (req, res)=>{
+    req.body.message = req.body.message ? 
+                        req.body.message
+                            :undefined;
+FormM.create(
+    {...req.body}, 
+    (err, result) => {
+        err?
+        console.log('Error: ', (err.message), ()=>{
+            res.status(400).json(err)
+        })
+        :res.status(201).json(result);
+    }
+)
 })
 
 app.listen(PORT, ()=>console.log(`App listening on ${PORT} port`))
