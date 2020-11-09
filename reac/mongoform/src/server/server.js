@@ -46,7 +46,7 @@ let formSchema = new mongoose.Schema({
     }
 })
 
-let FormM = mongoose.model("Form", formSchema )
+let FormModel = mongoose.model("Form", formSchema )
 
 app.get('/', (req, res)=>{
     res.send('root')
@@ -56,7 +56,7 @@ app.post('/', (req, res)=>{
     req.body.message = req.body.message ? 
                         req.body.message
                             :undefined;
-FormM.create(
+FormModel.create(
     {...req.body}, 
     (err, result) => {
         err?
