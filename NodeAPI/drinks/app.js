@@ -1,11 +1,16 @@
 const express = require('express');
 const app = express();
-const { response } = express()
-const fetch = require('node-fetch')
-const BP = require('body-parser')
-app.use(BP.json())
+
+const fetch = require('node-fetch');
+const BP = require('body-parser');
+const { response } = require('express');
+app.use(BP.json());
+
 
 const PORT = process.env.PORT || 3000
+
+app.use(express.static('public'))
+
 //API for Random Drink
 let randomdrink=('https://www.thecocktaildb.com/api/json/v1/1/random.php')
 
@@ -46,16 +51,36 @@ app.get('/getRandom', (req, res)=>{
         throw Error(response.statusText)
       }
       // If there are no errors return the response a JSON format
-      return response.json
+      return response.json()
     })
     //then take the data from the JSOn and pass to Index EJS to display new drink
     .then(data=>{
-      let parsedData = BP(data)
-     console.log(parsedData)
-    res.render('index.ejs', {data: drinks[0] })
+    res.render('index.ejs', {data: data.drinks[0] })
     })
     .catch(error=>
     console.error('Error from network: ', error))
 })
+
+const lookup = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
+
+app.get('/nameSearch', (req, res)=>{
+  let url = `${lookup}${req.query.title}`;
+  console.log(url)
+  fetch(url)
+  .then((response)=>{
+    //check for errors if found console log this error
+    if (!response.ok){
+      throw Error(response.statusText)
+    }
+    // If there are no errors return the response a JSON format
+    return response.json()
+  })
+  //then take the data from the JSOn and pass to Index EJS to display new drink
+  .then(data=>{
+  res.render('index.ejs', {data: data.drinks[0] })
+  })
+  .catch(error=>
+  console.error('Error from network: ', error))
+}) 
 
 app.listen(PORT, ()=>console.log(`App listening on ${PORT}.`));

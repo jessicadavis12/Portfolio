@@ -6,7 +6,6 @@ const PORT = process.env.PORT || 3000
 const casual = require('casual')
 
 const mongoose = require('mongoose');
-const { string } = require('casual');
 
 app.use(express.static('public'))
 
@@ -74,5 +73,20 @@ app.get('/readPage',(req, res)=>{
     // db.customers.find()
    //res.render('readPage.ejs')
 })
+
+// Delete - DELETE
+
+function removeElement(elementId){
+app.delete('/readPage/:id', (req, res)=>{
+    let requestedCustomerId= req.params.id;
+    CustomerModel.findByIdAndDelete(requestedCustomerId, function(error, result){
+        if(error){
+            res.status(400).send('Customer does not exist for deletion')
+        } else {
+            res.status(201).send(result)
+        }
+    })
+})
+}
 
 app.listen(PORT, ()=>console.log( `App listening on port ${PORT} `))
