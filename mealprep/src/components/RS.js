@@ -1,5 +1,7 @@
 import React, { Component} from 'react'
 import {Link} from 'react-router-dom'
+//recipe scraper for the recipe scraper component
+const recipeScraper = require('recipe-scraper')
 
 function RecipeCheck(){
 //displays the recipe resuts next to the user requested URL 

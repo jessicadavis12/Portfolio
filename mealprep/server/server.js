@@ -2,8 +2,7 @@
 const express = require('express')
 const app = express();
 
-//recipe scraper for the recipe scraper component
-const recipeScraper = require('recipe-scraper')
+
 //mongoose db
 const mongoose = require('mongoose')
 //defining the process port
