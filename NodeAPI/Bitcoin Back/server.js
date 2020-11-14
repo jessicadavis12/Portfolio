@@ -5,7 +5,6 @@ const app = express();
 const PORT = process.env.PORT ||30005
 
 const fetch= require("node-fetch");
-const { response } = require('express');
 
 app.use(express.static("public"));
 
