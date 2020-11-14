@@ -13,7 +13,7 @@ const bodyParser = require('body-parser')
 //parse application/x-www-form-urlencoded  req.body in the response object 
 app.use(bodyParser.urlencoded({extended: false}));
 //parse application/json
-app.use(bodyParser.json());
+
 
 app.use(express.static('client'))
 
