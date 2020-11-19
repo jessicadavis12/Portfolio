@@ -18,10 +18,13 @@ const PORT = process.env.PORT || 3000
 
 app.use(express.static('public'))
 
+
+//write a put and then use an update 
 app.get('/', (req, res)=>{
 recipeScraper('https://www.allrecipes.com/recipe/264086/keto-beef-egg-roll-slaw/?internalSource=hub%20recipe&referringId=22959&referringContentType=Recipe%20Hub&clickId=cardslot%2011')
 .then(recipe=>{
  console.log(recipe)
+ 
 })
 .catch(error => {
 });
