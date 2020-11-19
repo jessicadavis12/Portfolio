@@ -10,3 +10,5 @@ The big differences between relational (aka SQL databases) and document based da
 
 answer
 3
+
+Incorrect - answer is 2.  SQL has in-database procedures called stored procedures.  Mongo doesn't have them. To the best of my knowledge other document db's also don't.

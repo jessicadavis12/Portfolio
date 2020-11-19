@@ -21,3 +21,7 @@ part of the element selected.
     relative: positioning that is dependent on the file itself. Limits the scope of absolutely positioned child elements.    This also introduces the Z- index - which could be problematic with statically positioned elements
     fixed: position element is positioned relative to the viewport, when the page is scrolled- the fixed position stays where is relative to viewing port. 
     absolute:very powerful positioning that allows the programmer to determine exactally where elements go . Flexibility is the trade off. 
+
+Good answers - looks like #4 was not answered. More info https://webaim.org/techniques/css/invisiblecontent/
+
+2.25/3 points

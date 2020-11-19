@@ -24,3 +24,5 @@ cookie are data stored in small files in name value pairs that alow the website 
 another option for storing web browser data 
 sessionStorage objects part of API web storage that is erased when the user ends the session
 localStorage  objects part of API web storage that is saved to the local storage until the casche is cleared out by the user.  
+
+## Feedback - 2/3 points. Looks like the first question about GET was not answered.

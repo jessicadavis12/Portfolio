@@ -13,4 +13,4 @@ https://jsbin.com/yohivodobe/edit?html,output
 1. Span in an inline tag.  You can only adjust block elements
 2. Inline styling takes precidence over the ID syling 
 
-
+Correct - 3/3 points

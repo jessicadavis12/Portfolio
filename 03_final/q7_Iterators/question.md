@@ -13,3 +13,6 @@ Array:  array.forEach() calls a function once for each element in an array
 
         there are several different methods that were not mentioned due to them having specific functions as in array.reduce().  The 
         choice of an iterator depends of the purpose to iterate over the array.   
+
+
+## Feedback - good - 3/3

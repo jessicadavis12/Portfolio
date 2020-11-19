@@ -8,3 +8,7 @@
 
 ### Answer:
 1,2, 3
+
+Incorrect - maybe you thought it said correct answers?
+
+#4 - `typeof null` gives you `"object"`, the others are correct

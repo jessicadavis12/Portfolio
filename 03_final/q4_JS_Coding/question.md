@@ -20,3 +20,8 @@ What's wrong with my code below?  How would you fix it?  Would using `var pi =` 
     var boundary = Math.pow(radius, 2) * Math.PI
     if(boundary) console.log('boundary is ', boundary);
     }(20))
+
+50% credit for both
+
+A) right, it sorts the array in numerical, ascending order (compare function). But you did not stste how to reverse. The easy way is to use return raa-roo
+B) You fixed the code but did not talk about why it did not work originally. The original code did not work because it was trying to reference a variable (pi) that had not been defined.

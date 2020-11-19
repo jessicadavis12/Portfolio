@@ -21,4 +21,6 @@ With that in mind both orange and apple will point to the same location.  When o
 
 
 const orange = Arrray.from(apple); would clone the apple array.  Cloning the apple array as orange array would allow us to modify the type of orange 
-without modifying the apple array.  
+without modifying the apple array. 
+
+## Feedback - good - 3/3 points

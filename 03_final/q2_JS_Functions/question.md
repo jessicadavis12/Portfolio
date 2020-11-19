@@ -34,3 +34,5 @@ function compare(){
 }
 
 compare();
+
+Good - 3/3
