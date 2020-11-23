@@ -54,6 +54,10 @@ function App () {
             <input type="text" name='email' id="email" onChange={handleChange}/>
         </FormGroup>
         <FormGroup>
+            <label for='phone'> phone: </label>
+            <input type="number" name='phone' id="phone" onChange={handleChange}/>
+        </FormGroup> 
+        <FormGroup>
             <label for='message'> Message: </label>
             <input type="textarea" name='message' id="message" onChange={handleChange}/>
         </FormGroup>

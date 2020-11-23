@@ -4,11 +4,14 @@ const cors= require('cors');
 const BP = require('body-parser');
 require('dotenv').config()
 const mongoose = require('mongoose')
+const chalk = require('chalk')
+const logger = require('morgan')
 
 
 app.use(cors(),
     BP.urlencoded({extended: false}),
     BP.json,
+    logger('dev')
     )
 
 const PORT = process.env.PORT || 3000;
