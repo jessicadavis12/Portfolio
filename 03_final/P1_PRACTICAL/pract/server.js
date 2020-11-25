@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 //enables express to utilize the public folder 
 app.use(express.static('public'))
-
+//defines port to be used 
 const PORT = process.env.PORT || 3000
 
 app.get('/', (req, res)=>{
@@ -40,7 +40,7 @@ app.get('/', (req, res)=>{
   const lookup = "https://api.punkapi.com/v2/beers?beer_name"
 app.get('/nameSearch', (req, res)=>{
   let url = `${lookup}=${req.query.beer_name}`;
-  console.log(url)
+  //console.log(url)
   fetch(url)
   .then((response)=>{
     //check for errors if found console log this error
@@ -59,14 +59,7 @@ app.get('/nameSearch', (req, res)=>{
 }) 
 
 
-function addMe(){
-console.log('i fired')
-var checkbox=docuemnt.getElementbyID('favorite');
-if(checkbox.checked = true){
-favArray.push(this.data.name, this.data.description, this.data.image_url)
-}
-console.log(favArray)
-}
+
 
 
 app.get('/favorite', (req, res)=>{
