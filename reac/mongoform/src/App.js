@@ -30,6 +30,7 @@ function App () {
         event.preventDefault()
         axios.post(`${baseUrl}/new`, {...formData})
         .then(response => {
+            //console.log(response)
             resetFields()
         })
         .catch(err => console.log('Error: ', err))
@@ -42,26 +43,29 @@ function App () {
     <div className="App">
      <Form onSubmit={handleSubmit} autoComplete="off">
          <FormGroup>
-            <label for="fname">First Name:  </label>
-            <input type="text" name="fname" id="fname" onChange={handleChange}/>
+            <Label for="fname">First Name:  </Label>
+            <Input type="text" name="fname" id="fname" value={fname} onChange={handleChange}/>
          </FormGroup>
          <FormGroup>
-            <label for="fname">Last Name:  </label>
-            <input type="text" name = "lname" id="lname" onChange={handleChange}/>
+            <Label for="lname">Last Name:  </Label>
+            <Input type="text" name = "lname" id="lname" value={lname} onChange={handleChange}/>
          </FormGroup>
         <FormGroup>
-            <label for='email'> Email: </label>
-            <input type="text" name='email' id="email" onChange={handleChange}/>
+            <Label for='email'> Email: </Label>
+            <Input type="text" name='email' id="email" value={email} onChange={handleChange}/>
         </FormGroup>
         <FormGroup>
-            <label for='phone'> phone: </label>
-            <input type="number" name='phone' id="phone" onChange={handleChange}/>
+            <Label for='phone'> phone: </Label>
+            <Input type="number" name='phone' id="phone" value={phone} onChange={handleChange}/>
         </FormGroup> 
         <FormGroup>
-            <label for='message'> Message: </label>
-            <input type="textarea" name='message' id="message" onChange={handleChange}/>
+            <Label for='message'> Message: </Label>
+            <Input type="textarea" name='message' id="message" value={message} onChange={handleChange}/>
         </FormGroup>
-        <Button className='btn-success' style={{background: "darkgreen"}}> Submit</Button>
+        <Button className='btn-success' 
+        style={{background: "darkgreen"}}
+        > Submit
+        </Button>
          <Button className='btn-success'
                     type='reset'
                     style={{background:"darkred"}}>Reset</Button>

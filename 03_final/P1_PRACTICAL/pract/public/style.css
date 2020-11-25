@@ -25,11 +25,18 @@
   .card {
     border: grey solid 1px;
     width: 25%;
-    height: 25vh;
+    height: 50vh;
     display: inline-block;
     box-shadow: 3px 3px 10px grey;
+    overflow: hidden;
   }
   img {
     height: 50px;
-    width: 50px
+    width: 50px;
+    align-items: center
+  }
+
+  #fav{
+    padding: 15px;
+
   }

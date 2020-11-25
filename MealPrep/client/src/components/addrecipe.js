@@ -35,8 +35,8 @@ function Addrecipe(){
         return(
             <div className="AddRecipe">
                 <Form onSubmit = {handleSubmit}>
-                <label for = "url"> Enter URL of recipe to ad</label>
-                <input type="url" name="addrecipe" onChange={handleChange}/>
+                <Label for = "url"> Enter URL of recipe to ad</Label>
+                <Input type="url" name="recipeurl" value={recipeurl} onChange={handleChange}/>
                 <Button className='btn-success' style={{background: "darkgreen"}}> Submit</Button>
                 <Button className='btn-success'
                     type='reset'
