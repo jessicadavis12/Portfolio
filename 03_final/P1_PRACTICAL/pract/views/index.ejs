@@ -12,24 +12,31 @@
 
     <title>Beans Love Beers</title>
   </head>
+  <!--search that enables the user to search a string-->
   <form action='/nameSearch' id="beerlist">
     <div id="s-bar">
     <input type="search" name="beer_name"  class="form-control" placeholder="Looking for a specific Beer?">
   </div>
 </form>  
 
-<form action="/favorite">
-<label for= "favlist">Select your favorite beer and make a favorite list by clicking here. </label>
-<button id="favlist">Favorite List</button>
-<form
 
   <body>
-    <h1>Home Page</h1>
+    <h1>Craft Beer!</h1>
     <div class="card-container">
+      <!--go through the data array and apply the template of the cardData-->
         <% data.forEach(cardData =>{%>
             <%- include('partials/cards', {data: cardData}) %>
         <%})%>
     </div>
+
+    <form action="/favorite">
+      <!--user route to display their favorite beer-->
+     <div class="container">
+        <label for= "favlist">Select your favorite beer and make a favorite list by clicking here. </label>
+        <button id="favlist"> Favorite List </button>
+     </div>
+    </form>
+    
 
     <!-- Optional JavaScript; choose one of the two! -->
 

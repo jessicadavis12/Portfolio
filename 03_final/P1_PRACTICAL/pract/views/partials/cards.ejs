@@ -1,10 +1,19 @@
 
 <div class="card">
-    <h2>Name: <%= data.name   %></h2>
-    <p>Description: <%= data.description %></p>
-    <img src="<%= data.image_url %> " />
-    <div id="fav">
-    <input type="checkbox" onclick="addMe()" id='favorite'>
-      <label for="favorite">Favorite</label>
+  <form action="/createfav">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <h2 name="name"> <%= data.name   %></h2>
+        </div>
+        <div class="row">
+              <p name="description"> <%= data.description %></p>
+        </div>
+        <div class="row justify-content-md-center">
+              <img name="img" src="<%= data.image_url %> " /></br>
+        </div>
+        <div class="row justify-content-md-center">
+              <button type="submit" class="btn btn-primary" > Add to Fav </button>
+        </div>
     </div>
-  </div>
+  </form>
+</div>
