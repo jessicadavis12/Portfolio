@@ -39,6 +39,7 @@ app.use(express.static('public'))
 //defines port to be used 
 const PORT = process.env.PORT || 3000
 //returns the entire beer selecion
+
 app.get('/', (req, res)=>{
   //API endpoint 
     fetch("https://api.punkapi.com/v2/beers")
@@ -52,7 +53,6 @@ app.get('/', (req, res)=>{
       })
       //then take the data from the JSOn and pass to Index EJS to display new drink
       .then(data=>{
-         // console.log(data)
           //renders the specified data fom the data json
       res.render('index.ejs', {data: data})
       })
@@ -81,12 +81,12 @@ app.get('/nameSearch', (req, res)=>{
   console.error('Error from network: ', error))
 }) 
 
-app.get('/createfav', (req, res)=>{
+app.post('/createfav', (req, res)=>{
   //write fav beer to DB
     FavbeerModel.create(
       {
-        Name: `${req.body.name}`,
-        Description: `${req.body.description}`,
+        Name: `$(this.name)`,
+        Description: `$(this.description)`,
       },
       (err, favbeer)=>{
         err?
