@@ -1,48 +1,62 @@
-import './App.css';
-import axios from "axios";
-import {useState} from 'react'
-import { response } from 'express';
+import React, {useState} from "react";
+import axios from 'axios'
+import "./App.css";
+
 
 function App() {
-  const initialState={
-    fname:"", 
+
+  const initialState = {
+    fname: ""
+    // TODO: delete this line and uncomment other inputs as needed
+    // lname: "",
+    // email: "",
+    // phone: "",
+    // message: ""
   }
-  const [formData, setFormData] = setState(initialState)
-  
+
+  const [formData, setFormData] = useState(initialState)
+
+  const resetFields = () => {
+    setFormData(initialState)
+  }
+
   const handleClick = () => {
-    console.log("I am the handle click ")
-    axios
-    .get('/test')
-    .then((response)=> console.log(response.data.message))
-    .catch(err =>console.log(err))
-    .finally(()=> console.log('I am always here '))
+    console.log("I am the handleClick");
+    axios.get('/test')
+      .then((response) => console.log(response))
+      .catch((err) => console.log(err))
+      .finally(() => console.log("Always!!!"));
   };
- 
-  const handleChange = (event=>{
-    setFormData({
-      ...formData,
-      [event.target.name] : event.target.value
-    })
-  })
 
   const handleSubmit = (event) =>{
-  event.preventDefault()
-  axios.post('/new', formData)
-  .then(response => console.log('Response data', response.data))
-  .catch(err => console.log('Error: ', err))
+    event.preventDefault()
+    axios.post('/new', formData)
+    .then(response => console.log('Response data: ', response.data))
+    .catch(err => console.log('Error: ', err))
+    resetFields()
   }
+
+  const handleChange = (event)=>{
+    setFormData({
+        ...formData, // spread operator in order to maintain previous data
+        [event.target.name] : event.target.value
+    })
+  }
+
+  
+  let {fname} = formData;
 
   return (
     <div>
-      <h1>Mern DEMO</h1>
-     <button onClick={handleClick}> Click Me</button> 
-     <form onSubmit={handleSubmit}>
-       <label htmlFor="fname">First Name: </label>
-       <input type="text" name="fname" id="fname" 
-            onChange={handleChange}/>
-       <button type="submit">SUBMIT</button>
-    </form>
-   </div>
+      <h1>MERN DEMO</h1>
+      <button onClick={handleClick}>Click Me</button>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="fname">First Name: </label>
+        <input type="text" name="fname" id="fname" value={fname} onChange={handleChange} />
+        <button type="submit">SUBMIT</button>
+        <button type='reset' onClick={resetFields}>RESET</button>
+      </form>
+    </div>
   );
 }
 
