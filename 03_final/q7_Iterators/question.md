@@ -5,6 +5,10 @@ What are various iterator functions available in JavaScript (e.g. forEach)?  Wha
 
 Object: can be acessed throught object.entries() or if the keys are needed then object.keys() 
 
+### Feedback: 
+These should be Object.entries() and Object.keys(), not the lower case object.
+These have different meanings.
+
 
 Array:  array.forEach() calls a function once for each element in an array 
         array.map() creates a new array by performing a function on each array element. 
@@ -13,3 +17,6 @@ Array:  array.forEach() calls a function once for each element in an array
 
         there are several different methods that were not mentioned due to them having specific functions as in array.reduce().  The 
         choice of an iterator depends of the purpose to iterate over the array.   
+
+### Score:
+2.0 / 3.0

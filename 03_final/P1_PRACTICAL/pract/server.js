@@ -95,9 +95,6 @@ app.post('/createfav', (req, res)=>{
         }
     )})
 
-
-
-
 //renders the beer that the user checked as favorite 
 app.get('/favorite', (req, res)=>{
   //display the collection of FavBeers
