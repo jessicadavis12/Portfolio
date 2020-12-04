@@ -76,3 +76,11 @@ FROM hr.teams
 LEFT OUTER JOIN hr.players
 ON hr.teams.id = hr.players.team_id
 ORDER BY weight DESC
+=======
+
+### Feedback:
+The "all teams reported" requirement is missing. You would use a left join to accomplish that.
+
+The CASE statement to return "Heavy" and "Medium" are missing too.
+
+Score: 1.5/3.0

@@ -7,8 +7,10 @@
 
 
 ### Answer:
-1,2, 3
 
-Incorrect - maybe you thought it said correct answers?
 
-#4 - `typeof null` gives you `"object"`, the others are correct
+in-correct != correct
+
+this was asked and answered on the day of the exam at 9:56 am (please check slack under #_reviews channel)
+
+Correct answer is 4.

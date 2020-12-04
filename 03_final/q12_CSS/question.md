@@ -25,3 +25,9 @@ part of the element selected.
 Good answers - looks like #4 was not answered. More info https://webaim.org/techniques/css/invisiblecontent/
 
 2.25/3 points
+=======
+### Feedback:
+
+What about question 4?  Please research the topic of accessibility and this question within it as product developers are much more sensitive to accommodation these days.
+
+Score 2.0 / 3.0

@@ -4,14 +4,17 @@ const cors= require('cors');
 const BP = require('body-parser');
 require('dotenv').config()
 const mongoose = require('mongoose')
+const chalk = require('chalk')
+const logger = require('morgan')
 
 
 app.use(cors(),
     BP.urlencoded({extended: false}),
-    BP.json,
+    BP.json(),
+    logger('dev')
     )
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 //connection to mongoose
 mongoose.connect(
@@ -26,11 +29,11 @@ mongoose.connect(
 
 //blueprints
 let formSchema = new mongoose.Schema({
-    fName: {
+    fname: {
         type:String,
         required:[true, "Please enter first name"]
     } ,
-    lName: {
+    lname: {
         type: String,
         required:[true, "Please enter last name"]
     }, 
@@ -39,7 +42,7 @@ let formSchema = new mongoose.Schema({
         required:[true, "Please provide email address"]
     }, 
     phone: Number, 
-    Message:{
+    message:{
         type: String, 
         required:[false, "No message submited"]
 
@@ -52,7 +55,7 @@ app.get('/', (req, res)=>{
     res.send('root')
 })
 
-app.post('/', (req, res)=>{
+app.post('/new', (req, res)=>{
     req.body.message = req.body.message ? 
                         req.body.message
                             :undefined;

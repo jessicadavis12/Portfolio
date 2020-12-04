@@ -42,7 +42,7 @@ body, html {
     
 }
 .headerNav ul li:hover a{
-    display:block
+    display:block;
     background-color: white;
     color: black;
     display: block;

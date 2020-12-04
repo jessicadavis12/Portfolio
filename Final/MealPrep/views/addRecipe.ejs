@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+<form action='/check'>
+<div class="container">
+    <div class="row">
+        <div class="col-1">
+          <input type="number">
+        </div>
+        <div class="col-1">
+            <input type="text">
+        </div>
+        <div class="col-8">
+          <input type="text">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+          <input type="number">
+        </div>
+        <div class="col-1">
+            <input type="text">
+        </div>
+        <div class="col-8">
+          <input type="text">
+        </div>
+      </div>
+    </div>
+</div>
+</form>
+<form action = '/getRecipe'>
+  <input type="url" name="recipe" placeholder="enter url here">
+  <button onclick="recipeScraper()">Enter</button>
+</form>
+
+
+
+<%- include('partials/footer') %>

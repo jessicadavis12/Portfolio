@@ -17,6 +17,11 @@ Case 2:
 data- attributes give us the ability to embed custom data attribues on an HTML element that can be used inthe page's JavaScript
 to make a more engaging exerience.  
 
+Feedback: I am not deducting points here, but this is done to store app state
+data in the DOM, since prior to frameworks like React, where could you store the state of the app, except put it in the DOM.
+
+
+
 2. Describe the differences between a cookie, sessionStorage and localStorage and when would you use each of them. Please make it your answer, and not a copy and paste from somwhere (150 words max) 
 
 cookie are data stored in small files in name value pairs that alow the website to 'remember' information about a user.  
@@ -26,3 +31,8 @@ sessionStorage objects part of API web storage that is erased when the user ends
 localStorage  objects part of API web storage that is saved to the local storage until the casche is cleared out by the user.  
 
 ## Feedback - 2/3 points. Looks like the first question about GET was not answered.
+=======
+
+### Overall Score: 
+3.0 / 3.0
+
