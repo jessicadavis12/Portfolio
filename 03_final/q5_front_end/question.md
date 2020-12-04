@@ -30,3 +30,10 @@ Please write, test and copy here code that would create a navigation bar and pin
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
+
+
+
+### Feedback:
+Give you full credit for this as it works. However, 2 suggestions:
+1. place code in a testable code file, not in the .md file.
+2. provide a long page so that the stickiness of the navbar at the top can be easily tested. I have added several h1's to accomplish this.

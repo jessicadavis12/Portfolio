@@ -1,9 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import axios from 'axios'
 import { Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
-
-const baseUrl = (process.env.NODE_ENV==='development')?
-    'http://localhost:3001': process.env.PUBLIC_URL;
 
 const initialState = {
     url:""

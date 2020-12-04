@@ -14,3 +14,5 @@ https://jsbin.com/yohivodobe/edit?html,output
 2. Inline styling takes precidence over the ID syling 
 
 
+### Feedback:
+Correct
