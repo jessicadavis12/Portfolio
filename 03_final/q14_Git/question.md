@@ -13,3 +13,19 @@ b. local  git branch -d feature-collaboraton
 remote
     - git remote prune origin --dry-run
     -git remote prune origin 
+
+### Feedback:
+
+Most of the answer is correct except the very last one.
+
+The git prune command is an internal housekeeping utility that cleans up unreachable or "orphaned" Git objects. Unreachable objects are those that are inaccessible by any refs. Any commit that cannot be accessed through a branch or tag is considered unreachable. git prune is generally not executed directly. Prune is considered a garbage collection command and is a child command of the git gc command.
+
+To remove from remote, you would use ...
+
+git push origin --delete old_branch_name
+
+
+
+
+Score: 
+2.25/3.0

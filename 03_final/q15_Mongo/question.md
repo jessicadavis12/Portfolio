@@ -37,3 +37,21 @@ jessica.animals.find({eggs[]})
 jessica.animals.find({hello})
 
 
+### Feedback:
+
+No, these are not the right answers. The right ones are ...
+
+Question A:
+
+```
+db.things.distinct('type')
+db.things.distinct('egg')
+db.things.distinct('hello')
+```
+
+Question B:
+```
+db.things.count({type: "cat"})
+```
+
+Score: 0 / 3.0
