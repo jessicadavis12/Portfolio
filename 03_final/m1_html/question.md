@@ -11,3 +11,5 @@ Which of the following are some of the new features of HTML5 over the previous H
 ### Answer:
 
 skipped 
+
+all the above - 5

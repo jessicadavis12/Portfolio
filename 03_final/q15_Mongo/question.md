@@ -37,6 +37,15 @@ jessica.animals.find({eggs[]})
 jessica.animals.find({hello})
 
 
+
+Incorrect - These queries will give you unique values
+db.animals.distinct("type") 
+db.animals.distinct("egg") 
+db.animals.distinct("hello")
+
+and this will give you a count:
+db.things.find({type: "cat"}).count()
+=======
 ### Feedback:
 
 No, these are not the right answers. The right ones are ...

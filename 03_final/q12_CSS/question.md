@@ -22,6 +22,10 @@ part of the element selected.
     fixed: position element is positioned relative to the viewport, when the page is scrolled- the fixed position stays where is relative to viewing port. 
     absolute:very powerful positioning that allows the programmer to determine exactally where elements go . Flexibility is the trade off. 
 
+Good answers - looks like #4 was not answered. More info https://webaim.org/techniques/css/invisiblecontent/
+
+2.25/3 points
+=======
 ### Feedback:
 
 What about question 4?  Please research the topic of accessibility and this question within it as product developers are much more sensitive to accommodation these days.

@@ -9,9 +9,13 @@
 ### Answer
 4
 
+
+Partial credit - .5/2
+=======
 ### Correct answers:
 1. async .. await
 2. callback function
 3. Promise
 
 https://www.geeksforgeeks.org/how-to-make-javascript-wait-for-a-api-request-to-return/
+

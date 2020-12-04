@@ -14,6 +14,9 @@ remote
     - git remote prune origin --dry-run
     -git remote prune origin 
 
+
+Good - 3/3
+=======
 ### Feedback:
 
 Most of the answer is correct except the very last one.
@@ -29,3 +32,4 @@ git push origin --delete old_branch_name
 
 Score: 
 2.25/3.0
+

@@ -65,6 +65,18 @@ FULL JOIN teams
 ON (hr.players.team_id = teams.id)
 ORDER BY weight DESC;
 
+## Feedback - 2.5/3 points - almost there. You did not separate the weight into heavy and medium categories. Something like this:
+
+SELECT teams.id, teams.name, city, state, concat(fname, ' ', lname) as fullname, weight,
+CASE
+    WHEN weight > 200 THEN 'Heavy'
+    ELSE 'Medium'
+END AS WeightCategory
+FROM hr.teams
+LEFT OUTER JOIN hr.players
+ON hr.teams.id = hr.players.team_id
+ORDER BY weight DESC
+=======
 
 ### Feedback:
 The "all teams reported" requirement is missing. You would use a left join to accomplish that.

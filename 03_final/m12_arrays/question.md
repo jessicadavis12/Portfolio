@@ -20,5 +20,6 @@ function test(myArr) {
 ### Answer
 1
 
-### Feedback:
-Correct
+Correct!
+
+

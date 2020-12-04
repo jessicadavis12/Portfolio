@@ -11,6 +11,7 @@ The big differences between relational (aka SQL databases) and document based da
 answer
 3
 
+
 ### Feedback:
 Correct answer is 2. Document databases don't have functions in the db.
 They have them within the schema defined in the client.

@@ -53,7 +53,7 @@ app.get('/', (req, res)=>{
       })
       //then take the data from the JSOn and pass to Index EJS to display new drink
       .then(data=>{
-          //renders the specified data fom the data json
+
       res.render('index.ejs', {data: data})
       })
       .catch(error=>

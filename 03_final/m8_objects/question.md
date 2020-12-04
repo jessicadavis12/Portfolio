@@ -10,3 +10,5 @@ Pick any incorrect statements about enumerable properties of objects
 6. all of the above are true
 
 skipped 
+
+ #6 - all the above are true

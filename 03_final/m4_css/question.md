@@ -8,8 +8,6 @@
 ### Answer:
 2
 
-### Feedback: Incorrect
 
-https://www.w3schools.com/css/css_image_sprites.asp
 
 1. you need a large number of images on a page, e.g. on a carousel.

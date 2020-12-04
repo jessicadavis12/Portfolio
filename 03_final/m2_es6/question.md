@@ -21,7 +21,5 @@ What new ES6 method replaces the above annoying piece of code?
 
 2
 
-
-### Feedback Redone:
 No, correct answer is 3. someText.includes()
 Please check reference on String.prototype.includes.
