@@ -5,7 +5,8 @@ from 'react-router-dom'
 
 import Recipebook from './components/recipebook';
 import Shoppinglist from './components/shoppinglist';
-import Addrecipe from './components/addrecipe'
+import IngredientCounter from './components/manual'
+//import Addrecipe from './components/addrecipe'
 import Newmenu from './components/newmenu'
 import Search from './components/search'
 import './App.css';
@@ -19,15 +20,14 @@ class App extends Component {
           <ul>
             <li><Link to="/Recipebook">Recipebook</Link></li>
             <li><Link to="/Shoppinglist">Shoppinglist</Link></li>
-            <li><Link to="/Addrecipe" >Addrecipe</Link></li>            
             <li><Link to="/Newmenu" >Newment</Link></li>            
-            <li><Link to="/Addrecipe" >Addrecipe</Link></li>            
+            <li><Link to="/manual">IngredientCounter</Link></li>            
           </ul>
           <Route path="/Recipebook" component={Recipebook} />
           <Route path="/Shoppinglist" component={Shoppinglist} />
-          <Route path="/Addrecipe" component={Addrecipe}/>
           <Route path="/Newmenu" component={Newmenu}/>
           <Route path="/Search" component={Search}/>
+          <Route path="/IngredientCounter" component={}/>
 
           <hr/>
         </div>

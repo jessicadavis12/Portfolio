@@ -1,0 +1,66 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  body{
+    background-color: rgb(47, 142, 252)
+  }
+  
+  h1 {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .card_container {
+    
+    width: 75%;
+    margin: 3% auto;
+  }
+  
+  .card h2,
+  .card p {
+    text-align: center;
+  }
+  
+  .card {
+    border: grey solid 1px;
+    width: 33%;
+    height: 50vh;
+    display: inline-block;
+    box-shadow: 3px 3px 10px grey;
+    overflow: hidden;
+    background-color: bisque;
+  }
+  img {
+    height: 100px;
+    width: 50px;
+    
+
+  }
+
+  button{
+    margin-top: 15px;
+
+  }
+
+  #favlist{
+    background-color: bisque;
+    color: black;
+    border-radius: 15px;
+    outline: black;
+    padding: 10px 10px 10px 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  label{
+    font-weight: 900;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-justify: auto;
+  }
+
+  .fav{
+    background-color: cadetblue;
+  }
+  
