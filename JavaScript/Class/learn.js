@@ -1,4 +1,4 @@
-ddocument.querySelector("button").addEventListener("click", 
+document.querySelector("button").addEventListener("click", 
 function(){
     document.querySelector("h1").style.color = "blue";
 });

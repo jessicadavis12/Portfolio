@@ -1,0 +1,54 @@
+body{
+    background-color: #81847d;
+    
+}
+
+.banner {
+    width: 100%;
+    background: url('assets/banner.jpg') no-repeat;
+    height: 400px;
+    background-position: center;
+    border-bottom: black 45px solid;
+    margin-bottom: 20px;
+    
+}
+
+
+
+.map{
+    width: 100%;
+    background: url('assets/testmap.png') no-repeat;
+    background-position: center;
+    height: 375px;
+    margin-bottom: 20px;
+}
+
+.download{
+    margin-left: 20px;
+    border-radius: 10px;
+    background-color: #b9c1b9;
+}
+
+.card{
+    margin-right: 20px;
+}
+.card-header{
+    background-color: #b9c1b9;
+   
+}
+
+.card-body{
+    background-color: #f2f0ec;
+  
+}
+
+.btn{
+    color: #41474a;
+}
+
+
+.footer{
+    background-color: black;
+    height: 20px;
+    width: 100%;
+}
